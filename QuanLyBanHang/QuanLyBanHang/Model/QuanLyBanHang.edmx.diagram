@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="23a106514d1a47919163e67977cae302" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyBanHangModel.ChiTietHDN" Width="1.5" PointX="4.2107953355697889" PointY="17.644944392910666" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.ChiTietHDX" Width="1.5" PointX="8.3581644912986839" PointY="23.054291348463991" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.DatHang" Width="1.5" PointX="5.5687455635372292" PointY="0.86829943995377956" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.HoaDonNhap" Width="1.5" PointX="2.8410829393384436" PointY="3.9787181783368428" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.HoaDonXuat" Width="1.5" PointX="0.93843467204758657" PointY="24.81597456001489" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.LoaiSanPham" Width="1.5" PointX="5.3854505295797486" PointY="23.977493267495881" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.NhaCungCap" Width="1.5" PointX="0.99678621301277825" PointY="29.022242306276336" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.SanPham" Width="1.5" PointX="5.6503322206671971" PointY="25.178825807375286" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.sysdiagram" Width="1.5" PointX="8.2559280210435055" PointY="18.176787712693582" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.TaiKhoan" Width="1.5" PointX="0.64472415700774832" PointY="22.989447917318646" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.ViewDatHang" Width="1.5" PointX="1.7035251603012558" PointY="2.7088621718384616" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.ViewSanPham" Width="1.5" PointX="5.5514731880051427" PointY="21.116484413443359" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_ChiTietHDN_HoaDonNhap" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_ChiTietHDN_SanPham" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_ChiTietHDX_HoaDonXuat" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_ChiTietHDX_SanPham" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_DatHang_SanPham" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_HoaDonNhap_TaiKhoan" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_HoaDonXuat_TaiKhoan" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_SanPham_LoaiSanPham1" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_SanPham_NhaCungCap" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

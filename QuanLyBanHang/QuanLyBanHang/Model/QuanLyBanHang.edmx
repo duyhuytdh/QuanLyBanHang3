@@ -1,0 +1,852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QuanLyBanHangModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="QuanLyBanHangModelStoreContainer">
+          <EntitySet Name="ChiTietHDN" EntityType="QuanLyBanHangModel.Store.ChiTietHDN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ChiTietHDX" EntityType="QuanLyBanHangModel.Store.ChiTietHDX" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DatHang" EntityType="QuanLyBanHangModel.Store.DatHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HoaDonNhap" EntityType="QuanLyBanHangModel.Store.HoaDonNhap" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HoaDonXuat" EntityType="QuanLyBanHangModel.Store.HoaDonXuat" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LoaiSanPham" EntityType="QuanLyBanHangModel.Store.LoaiSanPham" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NhaCungCap" EntityType="QuanLyBanHangModel.Store.NhaCungCap" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SanPham" EntityType="QuanLyBanHangModel.Store.SanPham" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="QuanLyBanHangModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TaiKhoan" EntityType="QuanLyBanHangModel.Store.TaiKhoan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ViewDatHang" EntityType="QuanLyBanHangModel.Store.ViewDatHang" store:Type="Views" store:Schema="dbo" store:Name="ViewDatHang">
+            <DefiningQuery>SELECT 
+      [ViewDatHang].[SoLuong] AS [SoLuong], 
+      [ViewDatHang].[MaDatHang] AS [MaDatHang], 
+      [ViewDatHang].[ID] AS [ID], 
+      [ViewDatHang].[NgayDat] AS [NgayDat], 
+      [ViewDatHang].[NgayNhan] AS [NgayNhan], 
+      [ViewDatHang].[TenKhachHang] AS [TenKhachHang], 
+      [ViewDatHang].[DienThoai] AS [DienThoai], 
+      [ViewDatHang].[MaSP] AS [MaSP], 
+      [ViewDatHang].[TenSP] AS [TenSP], 
+      [ViewDatHang].[DonViTinh] AS [DonViTinh]
+      FROM [dbo].[ViewDatHang] AS [ViewDatHang]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewSanPham" EntityType="QuanLyBanHangModel.Store.ViewSanPham" store:Type="Views" store:Schema="dbo" store:Name="ViewSanPham">
+            <DefiningQuery>SELECT 
+      [ViewSanPham].[MaLoai] AS [MaLoai], 
+      [ViewSanPham].[MaNCC] AS [MaNCC], 
+      [ViewSanPham].[TenSP] AS [TenSP], 
+      [ViewSanPham].[MaSP] AS [MaSP], 
+      [ViewSanPham].[DonViTinh] AS [DonViTinh]
+      FROM [dbo].[ViewSanPham] AS [ViewSanPham]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_ChiTietHDN_HoaDonNhap" Association="QuanLyBanHangModel.Store.FK_ChiTietHDN_HoaDonNhap">
+            <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
+            <End Role="ChiTietHDN" EntitySet="ChiTietHDN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietHDN_SanPham" Association="QuanLyBanHangModel.Store.FK_ChiTietHDN_SanPham">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="ChiTietHDN" EntitySet="ChiTietHDN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietHDX_HoaDonXuat" Association="QuanLyBanHangModel.Store.FK_ChiTietHDX_HoaDonXuat">
+            <End Role="HoaDonXuat" EntitySet="HoaDonXuat" />
+            <End Role="ChiTietHDX" EntitySet="ChiTietHDX" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietHDX_SanPham" Association="QuanLyBanHangModel.Store.FK_ChiTietHDX_SanPham">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="ChiTietHDX" EntitySet="ChiTietHDX" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DatHang_SanPham" Association="QuanLyBanHangModel.Store.FK_DatHang_SanPham">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="DatHang" EntitySet="DatHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDonNhap_TaiKhoan" Association="QuanLyBanHangModel.Store.FK_HoaDonNhap_TaiKhoan">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDonXuat_TaiKhoan" Association="QuanLyBanHangModel.Store.FK_HoaDonXuat_TaiKhoan">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="HoaDonXuat" EntitySet="HoaDonXuat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SanPham_LoaiSanPham1" Association="QuanLyBanHangModel.Store.FK_SanPham_LoaiSanPham1">
+            <End Role="LoaiSanPham" EntitySet="LoaiSanPham" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SanPham_NhaCungCap" Association="QuanLyBanHangModel.Store.FK_SanPham_NhaCungCap">
+            <End Role="NhaCungCap" EntitySet="NhaCungCap" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ChiTietHDN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDHDN" Type="bigint" Nullable="false" />
+          <Property Name="IDSP" Type="bigint" Nullable="false" />
+          <Property Name="SoLuong" Type="float" Nullable="false" />
+          <Property Name="Dongia" Type="float" Nullable="false" />
+          <Property Name="VAT" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChiTietHDX">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDHDX" Type="bigint" Nullable="false" />
+          <Property Name="IDSP" Type="bigint" Nullable="false" />
+          <Property Name="SoLuong" Type="float" Nullable="false" />
+          <Property Name="DonGia" Type="float" Nullable="false" />
+          <Property Name="VAT" Type="float" />
+        </EntityType>
+        <EntityType Name="DatHang">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDSP" Type="bigint" Nullable="false" />
+          <Property Name="MaDatHang" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="SoLuong" Type="float" Nullable="false" />
+          <Property Name="NgayDat" Type="datetime" Nullable="false" />
+          <Property Name="NgayNhan" Type="datetime" Nullable="false" />
+          <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" />
+          <Property Name="DienThoai" Type="nvarchar" MaxLength="11" />
+          <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HoaDonNhap">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDTaiKhoan" Type="bigint" Nullable="false" />
+          <Property Name="MaHDN" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="NgayNhap" Type="datetime" Nullable="false" />
+          <Property Name="TongTien" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HoaDonXuat">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDTK" Type="bigint" Nullable="false" />
+          <Property Name="MaHDX" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="NgayXuat" Type="datetime" Nullable="false" />
+          <Property Name="TongTien" Type="float" Nullable="false" />
+          <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" />
+          <Property Name="DienThoai" Type="nvarchar" MaxLength="11" />
+        </EntityType>
+        <EntityType Name="LoaiSanPham">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoaiSP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaLoai" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="MoTa" Type="nvarchar" MaxLength="100" />
+          <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NhaCungCap">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaNCC" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="TenNCC" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DienThoai" Type="nvarchar" MaxLength="11" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="11" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDLoaiSP" Type="bigint" Nullable="false" />
+          <Property Name="IDNCC" Type="bigint" Nullable="false" />
+          <Property Name="MaSP" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TenSP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SoLuong" Type="float" Nullable="false" />
+          <Property Name="DonViTinh" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="GiaNhap" Type="float" Nullable="false" />
+          <Property Name="GiaBan" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TaiKhoan" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MatKhau" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="NgayTao" Type="datetime" Nullable="false" />
+          <Property Name="AdminYN" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'QuanLyBanHang.dbo.ViewDatHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ViewDatHang">
+          <Key>
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="MaDatHang" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="NgayDat" />
+            <PropertyRef Name="NgayNhan" />
+            <PropertyRef Name="MaSP" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="DonViTinh" />
+          </Key>
+          <Property Name="SoLuong" Type="float" Nullable="false" />
+          <Property Name="MaDatHang" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="NgayDat" Type="datetime" Nullable="false" />
+          <Property Name="NgayNhan" Type="datetime" Nullable="false" />
+          <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" />
+          <Property Name="DienThoai" Type="nvarchar" MaxLength="11" />
+          <Property Name="MaSP" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TenSP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DonViTinh" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'QuanLyBanHang.dbo.ViewSanPham' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ViewSanPham">
+          <Key>
+            <PropertyRef Name="MaLoai" />
+            <PropertyRef Name="MaNCC" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="MaSP" />
+            <PropertyRef Name="DonViTinh" />
+          </Key>
+          <Property Name="MaLoai" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="MaNCC" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="TenSP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaSP" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="DonViTinh" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_ChiTietHDN_HoaDonNhap">
+          <End Role="HoaDonNhap" Type="QuanLyBanHangModel.Store.HoaDonNhap" Multiplicity="1" />
+          <End Role="ChiTietHDN" Type="QuanLyBanHangModel.Store.ChiTietHDN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonNhap">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChiTietHDN">
+              <PropertyRef Name="IDHDN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietHDN_SanPham">
+          <End Role="SanPham" Type="QuanLyBanHangModel.Store.SanPham" Multiplicity="1" />
+          <End Role="ChiTietHDN" Type="QuanLyBanHangModel.Store.ChiTietHDN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChiTietHDN">
+              <PropertyRef Name="IDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietHDX_HoaDonXuat">
+          <End Role="HoaDonXuat" Type="QuanLyBanHangModel.Store.HoaDonXuat" Multiplicity="1" />
+          <End Role="ChiTietHDX" Type="QuanLyBanHangModel.Store.ChiTietHDX" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonXuat">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChiTietHDX">
+              <PropertyRef Name="IDHDX" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietHDX_SanPham">
+          <End Role="SanPham" Type="QuanLyBanHangModel.Store.SanPham" Multiplicity="1" />
+          <End Role="ChiTietHDX" Type="QuanLyBanHangModel.Store.ChiTietHDX" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChiTietHDX">
+              <PropertyRef Name="IDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DatHang_SanPham">
+          <End Role="SanPham" Type="QuanLyBanHangModel.Store.SanPham" Multiplicity="1" />
+          <End Role="DatHang" Type="QuanLyBanHangModel.Store.DatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DatHang">
+              <PropertyRef Name="IDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDonNhap_TaiKhoan">
+          <End Role="TaiKhoan" Type="QuanLyBanHangModel.Store.TaiKhoan" Multiplicity="1" />
+          <End Role="HoaDonNhap" Type="QuanLyBanHangModel.Store.HoaDonNhap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HoaDonNhap">
+              <PropertyRef Name="IDTaiKhoan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDonXuat_TaiKhoan">
+          <End Role="TaiKhoan" Type="QuanLyBanHangModel.Store.TaiKhoan" Multiplicity="1" />
+          <End Role="HoaDonXuat" Type="QuanLyBanHangModel.Store.HoaDonXuat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HoaDonXuat">
+              <PropertyRef Name="IDTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SanPham_LoaiSanPham1">
+          <End Role="LoaiSanPham" Type="QuanLyBanHangModel.Store.LoaiSanPham" Multiplicity="1" />
+          <End Role="SanPham" Type="QuanLyBanHangModel.Store.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiSanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="IDLoaiSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SanPham_NhaCungCap">
+          <End Role="NhaCungCap" Type="QuanLyBanHangModel.Store.NhaCungCap" Multiplicity="1" />
+          <End Role="SanPham" Type="QuanLyBanHangModel.Store.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaCungCap">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="IDNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuanLyBanHangModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="QuanLyBanHangEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ChiTietHDNs" EntityType="QuanLyBanHangModel.ChiTietHDN" />
+          <EntitySet Name="ChiTietHDXes" EntityType="QuanLyBanHangModel.ChiTietHDX" />
+          <EntitySet Name="DatHangs" EntityType="QuanLyBanHangModel.DatHang" />
+          <EntitySet Name="HoaDonNhaps" EntityType="QuanLyBanHangModel.HoaDonNhap" />
+          <EntitySet Name="HoaDonXuats" EntityType="QuanLyBanHangModel.HoaDonXuat" />
+          <EntitySet Name="LoaiSanPhams" EntityType="QuanLyBanHangModel.LoaiSanPham" />
+          <EntitySet Name="NhaCungCaps" EntityType="QuanLyBanHangModel.NhaCungCap" />
+          <EntitySet Name="SanPhams" EntityType="QuanLyBanHangModel.SanPham" />
+          <EntitySet Name="sysdiagrams" EntityType="QuanLyBanHangModel.sysdiagram" />
+          <EntitySet Name="TaiKhoans" EntityType="QuanLyBanHangModel.TaiKhoan" />
+          <EntitySet Name="ViewDatHangs" EntityType="QuanLyBanHangModel.ViewDatHang" />
+          <EntitySet Name="ViewSanPhams" EntityType="QuanLyBanHangModel.ViewSanPham" />
+          <AssociationSet Name="FK_ChiTietHDN_HoaDonNhap" Association="QuanLyBanHangModel.FK_ChiTietHDN_HoaDonNhap">
+            <End Role="HoaDonNhap" EntitySet="HoaDonNhaps" />
+            <End Role="ChiTietHDN" EntitySet="ChiTietHDNs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietHDN_SanPham" Association="QuanLyBanHangModel.FK_ChiTietHDN_SanPham">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="ChiTietHDN" EntitySet="ChiTietHDNs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietHDX_HoaDonXuat" Association="QuanLyBanHangModel.FK_ChiTietHDX_HoaDonXuat">
+            <End Role="HoaDonXuat" EntitySet="HoaDonXuats" />
+            <End Role="ChiTietHDX" EntitySet="ChiTietHDXes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietHDX_SanPham" Association="QuanLyBanHangModel.FK_ChiTietHDX_SanPham">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="ChiTietHDX" EntitySet="ChiTietHDXes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DatHang_SanPham" Association="QuanLyBanHangModel.FK_DatHang_SanPham">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="DatHang" EntitySet="DatHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDonNhap_TaiKhoan" Association="QuanLyBanHangModel.FK_HoaDonNhap_TaiKhoan">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="HoaDonNhap" EntitySet="HoaDonNhaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDonXuat_TaiKhoan" Association="QuanLyBanHangModel.FK_HoaDonXuat_TaiKhoan">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="HoaDonXuat" EntitySet="HoaDonXuats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SanPham_LoaiSanPham1" Association="QuanLyBanHangModel.FK_SanPham_LoaiSanPham1">
+            <End Role="LoaiSanPham" EntitySet="LoaiSanPhams" />
+            <End Role="SanPham" EntitySet="SanPhams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SanPham_NhaCungCap" Association="QuanLyBanHangModel.FK_SanPham_NhaCungCap">
+            <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
+            <End Role="SanPham" EntitySet="SanPhams" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ChiTietHDN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IDHDN" Nullable="false" />
+          <Property Type="Int64" Name="IDSP" Nullable="false" />
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="Double" Name="Dongia" Nullable="false" />
+          <Property Type="Double" Name="VAT" Nullable="false" />
+          <NavigationProperty Name="HoaDonNhap" Relationship="QuanLyBanHangModel.FK_ChiTietHDN_HoaDonNhap" FromRole="ChiTietHDN" ToRole="HoaDonNhap" />
+          <NavigationProperty Name="SanPham" Relationship="QuanLyBanHangModel.FK_ChiTietHDN_SanPham" FromRole="ChiTietHDN" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="ChiTietHDX">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IDHDX" Nullable="false" />
+          <Property Type="Int64" Name="IDSP" Nullable="false" />
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="Double" Name="DonGia" Nullable="false" />
+          <Property Type="Double" Name="VAT" />
+          <NavigationProperty Name="HoaDonXuat" Relationship="QuanLyBanHangModel.FK_ChiTietHDX_HoaDonXuat" FromRole="ChiTietHDX" ToRole="HoaDonXuat" />
+          <NavigationProperty Name="SanPham" Relationship="QuanLyBanHangModel.FK_ChiTietHDX_SanPham" FromRole="ChiTietHDX" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="DatHang">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IDSP" Nullable="false" />
+          <Property Type="String" Name="MaDatHang" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="DateTime" Name="NgayDat" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="NgayNhan" Nullable="false" Precision="3" />
+          <Property Type="String" Name="TenKhachHang" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DienThoai" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GhiChu" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SanPham" Relationship="QuanLyBanHangModel.FK_DatHang_SanPham" FromRole="DatHang" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="HoaDonNhap">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IDTaiKhoan" Nullable="false" />
+          <Property Type="String" Name="MaHDN" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayNhap" Nullable="false" Precision="3" />
+          <Property Type="Double" Name="TongTien" Nullable="false" />
+          <NavigationProperty Name="ChiTietHDNs" Relationship="QuanLyBanHangModel.FK_ChiTietHDN_HoaDonNhap" FromRole="HoaDonNhap" ToRole="ChiTietHDN" />
+          <NavigationProperty Name="TaiKhoan" Relationship="QuanLyBanHangModel.FK_HoaDonNhap_TaiKhoan" FromRole="HoaDonNhap" ToRole="TaiKhoan" />
+        </EntityType>
+        <EntityType Name="HoaDonXuat">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IDTK" Nullable="false" />
+          <Property Type="String" Name="MaHDX" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayXuat" Nullable="false" Precision="3" />
+          <Property Type="Double" Name="TongTien" Nullable="false" />
+          <Property Type="String" Name="TenKhachHang" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DienThoai" MaxLength="11" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ChiTietHDXes" Relationship="QuanLyBanHangModel.FK_ChiTietHDX_HoaDonXuat" FromRole="HoaDonXuat" ToRole="ChiTietHDX" />
+          <NavigationProperty Name="TaiKhoan" Relationship="QuanLyBanHangModel.FK_HoaDonXuat_TaiKhoan" FromRole="HoaDonXuat" ToRole="TaiKhoan" />
+        </EntityType>
+        <EntityType Name="LoaiSanPham">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TenLoaiSP" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MoTa" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GhiChu" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SanPhams" Relationship="QuanLyBanHangModel.FK_SanPham_LoaiSanPham1" FromRole="LoaiSanPham" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="NhaCungCap">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MaNCC" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TenNCC" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DienThoai" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DiaChi" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax" MaxLength="11" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SanPhams" Relationship="QuanLyBanHangModel.FK_SanPham_NhaCungCap" FromRole="NhaCungCap" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IDLoaiSP" Nullable="false" />
+          <Property Type="Int64" Name="IDNCC" Nullable="false" />
+          <Property Type="String" Name="MaSP" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TenSP" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="String" Name="DonViTinh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="GiaNhap" Nullable="false" />
+          <Property Type="Double" Name="GiaBan" Nullable="false" />
+          <NavigationProperty Name="ChiTietHDNs" Relationship="QuanLyBanHangModel.FK_ChiTietHDN_SanPham" FromRole="SanPham" ToRole="ChiTietHDN" />
+          <NavigationProperty Name="ChiTietHDXes" Relationship="QuanLyBanHangModel.FK_ChiTietHDX_SanPham" FromRole="SanPham" ToRole="ChiTietHDX" />
+          <NavigationProperty Name="DatHangs" Relationship="QuanLyBanHangModel.FK_DatHang_SanPham" FromRole="SanPham" ToRole="DatHang" />
+          <NavigationProperty Name="LoaiSanPham" Relationship="QuanLyBanHangModel.FK_SanPham_LoaiSanPham1" FromRole="SanPham" ToRole="LoaiSanPham" />
+          <NavigationProperty Name="NhaCungCap" Relationship="QuanLyBanHangModel.FK_SanPham_NhaCungCap" FromRole="SanPham" ToRole="NhaCungCap" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TaiKhoan1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MatKhau" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayTao" Nullable="false" Precision="3" />
+          <Property Type="String" Name="AdminYN" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="HoaDonNhaps" Relationship="QuanLyBanHangModel.FK_HoaDonNhap_TaiKhoan" FromRole="TaiKhoan" ToRole="HoaDonNhap" />
+          <NavigationProperty Name="HoaDonXuats" Relationship="QuanLyBanHangModel.FK_HoaDonXuat_TaiKhoan" FromRole="TaiKhoan" ToRole="HoaDonXuat" />
+        </EntityType>
+        <EntityType Name="ViewDatHang">
+          <Key>
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="MaDatHang" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="NgayDat" />
+            <PropertyRef Name="NgayNhan" />
+            <PropertyRef Name="MaSP" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="DonViTinh" />
+          </Key>
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="String" Name="MaDatHang" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="NgayDat" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="NgayNhan" Nullable="false" Precision="3" />
+          <Property Type="String" Name="TenKhachHang" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DienThoai" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MaSP" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TenSP" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DonViTinh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ViewSanPham">
+          <Key>
+            <PropertyRef Name="MaLoai" />
+            <PropertyRef Name="MaNCC" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="MaSP" />
+            <PropertyRef Name="DonViTinh" />
+          </Key>
+          <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MaNCC" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TenSP" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MaSP" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DonViTinh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_ChiTietHDN_HoaDonNhap">
+          <End Type="QuanLyBanHangModel.HoaDonNhap" Role="HoaDonNhap" Multiplicity="1" />
+          <End Type="QuanLyBanHangModel.ChiTietHDN" Role="ChiTietHDN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonNhap">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChiTietHDN">
+              <PropertyRef Name="IDHDN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietHDN_SanPham">
+          <End Type="QuanLyBanHangModel.SanPham" Role="SanPham" Multiplicity="1" />
+          <End Type="QuanLyBanHangModel.ChiTietHDN" Role="ChiTietHDN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChiTietHDN">
+              <PropertyRef Name="IDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietHDX_HoaDonXuat">
+          <End Type="QuanLyBanHangModel.HoaDonXuat" Role="HoaDonXuat" Multiplicity="1" />
+          <End Type="QuanLyBanHangModel.ChiTietHDX" Role="ChiTietHDX" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonXuat">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChiTietHDX">
+              <PropertyRef Name="IDHDX" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietHDX_SanPham">
+          <End Type="QuanLyBanHangModel.SanPham" Role="SanPham" Multiplicity="1" />
+          <End Type="QuanLyBanHangModel.ChiTietHDX" Role="ChiTietHDX" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChiTietHDX">
+              <PropertyRef Name="IDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DatHang_SanPham">
+          <End Type="QuanLyBanHangModel.SanPham" Role="SanPham" Multiplicity="1" />
+          <End Type="QuanLyBanHangModel.DatHang" Role="DatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DatHang">
+              <PropertyRef Name="IDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDonNhap_TaiKhoan">
+          <End Type="QuanLyBanHangModel.TaiKhoan" Role="TaiKhoan" Multiplicity="1" />
+          <End Type="QuanLyBanHangModel.HoaDonNhap" Role="HoaDonNhap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HoaDonNhap">
+              <PropertyRef Name="IDTaiKhoan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDonXuat_TaiKhoan">
+          <End Type="QuanLyBanHangModel.TaiKhoan" Role="TaiKhoan" Multiplicity="1" />
+          <End Type="QuanLyBanHangModel.HoaDonXuat" Role="HoaDonXuat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HoaDonXuat">
+              <PropertyRef Name="IDTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SanPham_LoaiSanPham1">
+          <End Type="QuanLyBanHangModel.LoaiSanPham" Role="LoaiSanPham" Multiplicity="1" />
+          <End Type="QuanLyBanHangModel.SanPham" Role="SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiSanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="IDLoaiSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SanPham_NhaCungCap">
+          <End Type="QuanLyBanHangModel.NhaCungCap" Role="NhaCungCap" Multiplicity="1" />
+          <End Type="QuanLyBanHangModel.SanPham" Role="SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaCungCap">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="IDNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanLyBanHangModelStoreContainer" CdmEntityContainer="QuanLyBanHangEntities">
+          <EntitySetMapping Name="ChiTietHDNs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.ChiTietHDN">
+              <MappingFragment StoreEntitySet="ChiTietHDN">
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="Dongia" ColumnName="Dongia" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+                <ScalarProperty Name="IDHDN" ColumnName="IDHDN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChiTietHDXes">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.ChiTietHDX">
+              <MappingFragment StoreEntitySet="ChiTietHDX">
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+                <ScalarProperty Name="IDHDX" ColumnName="IDHDX" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DatHangs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.DatHang">
+              <MappingFragment StoreEntitySet="DatHang">
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+                <ScalarProperty Name="NgayNhan" ColumnName="NgayNhan" />
+                <ScalarProperty Name="NgayDat" ColumnName="NgayDat" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="MaDatHang" ColumnName="MaDatHang" />
+                <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoaDonNhaps">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.HoaDonNhap">
+              <MappingFragment StoreEntitySet="HoaDonNhap">
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+                <ScalarProperty Name="MaHDN" ColumnName="MaHDN" />
+                <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoaDonXuats">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.HoaDonXuat">
+              <MappingFragment StoreEntitySet="HoaDonXuat">
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="NgayXuat" ColumnName="NgayXuat" />
+                <ScalarProperty Name="MaHDX" ColumnName="MaHDX" />
+                <ScalarProperty Name="IDTK" ColumnName="IDTK" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoaiSanPhams">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.LoaiSanPham">
+              <MappingFragment StoreEntitySet="LoaiSanPham">
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+                <ScalarProperty Name="TenLoaiSP" ColumnName="TenLoaiSP" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhaCungCaps">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.NhaCungCap">
+              <MappingFragment StoreEntitySet="NhaCungCap">
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
+                <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SanPhams">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.SanPham">
+              <MappingFragment StoreEntitySet="SanPham">
+                <ScalarProperty Name="GiaBan" ColumnName="GiaBan" />
+                <ScalarProperty Name="GiaNhap" ColumnName="GiaNhap" />
+                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="IDNCC" ColumnName="IDNCC" />
+                <ScalarProperty Name="IDLoaiSP" ColumnName="IDLoaiSP" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoans">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="AdminYN" ColumnName="AdminYN" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="TaiKhoan1" ColumnName="TaiKhoan" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewDatHangs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.ViewDatHang">
+              <MappingFragment StoreEntitySet="ViewDatHang">
+                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+                <ScalarProperty Name="NgayNhan" ColumnName="NgayNhan" />
+                <ScalarProperty Name="NgayDat" ColumnName="NgayDat" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MaDatHang" ColumnName="MaDatHang" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewSanPhams">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.ViewSanPham">
+              <MappingFragment StoreEntitySet="ViewSanPham">
+                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+                <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
