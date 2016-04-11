@@ -33,8 +33,13 @@ namespace QuanLyBanHang
                                         && x.MatKhau == txtMatKhau.Text);
                     if (user != null)
                     {
-                        this.Close();
                         MsgUtil.userID = user.ID;
+                        if (user.AdminYN.Trim() == "Y")
+                        {
+                            MsgUtil.isAdmin = true;
+                        }
+                        else MsgUtil.isAdmin = false;
+                        this.Close();
                     }
                     else
                     {

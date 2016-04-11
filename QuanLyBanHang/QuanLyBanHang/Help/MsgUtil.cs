@@ -10,6 +10,8 @@ namespace QuanLyBanHang.Help
     public static class MsgUtil
     {
         public static long userID;
+        public static bool isAdmin;
+
         public static void MessageThongBao(string messageText)
         {
             MessageBox.Show(messageText, "Thông Báo", MessageBoxButtons.OK);

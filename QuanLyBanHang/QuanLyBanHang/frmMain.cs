@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using QuanLyBanHang.DanhMuc;
 using QuanLyBanHang.HeThong;
 using QuanLyBanHang.NghiepVu;
+using QuanLyBanHang.Help;
 
 namespace QuanLyBanHang
 {
@@ -20,13 +21,25 @@ namespace QuanLyBanHang
             InitializeComponent();
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
+        public void PhanQuyen()
         {
+            //Phân quyền truy cập
+            if (!MsgUtil.isAdmin)
+            {
+                menu_tai_khoan.Enabled = false;
+                menuBaoCao.Enabled = false;
+            }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {   
             frmDangNhap frm = new frmDangNhap();
             frm.ShowDialog();
+            PhanQuyen();
         }
 
         #region Event
+
         #region He thong
         private void menu_tai_khoan_Click(object sender, EventArgs e)
         {
@@ -63,7 +76,6 @@ namespace QuanLyBanHang
         }
         #endregion
 
-
         #region Nghiep Vu
         private void menuItemDatHang_Click(object sender, EventArgs e)
         {
@@ -83,6 +95,7 @@ namespace QuanLyBanHang
             frm.ShowDialog();
         }
         #endregion
+
         #endregion
 
 
