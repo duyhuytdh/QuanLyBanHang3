@@ -16,6 +16,7 @@ namespace QuanLyBanHang.NghiepVu
     {
         string mMaHDX;
         long mIDHDX;
+        QuanLyBanHangEntities db;
         public frmChiTietHDX()
         {
             InitializeComponent();
@@ -34,17 +35,20 @@ namespace QuanLyBanHang.NghiepVu
         private void loadDatatoGrid()
         {
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.ChiTietHDX' table. You can move, or remove it, as needed.
-            this.chiTietHDXTableAdapter.Fill(this.quanLyBanHangDataSet.ChiTietHDX);
+            grvHDXDetail.DataSource = db.ChiTietHDXes.Where(x => x.IDHDX == mIDHDX).ToList();
+            grvHDXDetail.Refresh();
         }
 
         private void frmChiTietHDX_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyBanHangDataSet.ViewChiTietHDX' table. You can move, or remove it, as needed.
+            this.viewChiTietHDXTableAdapter.Fill(this.quanLyBanHangDataSet.ViewChiTietHDX);
+            db = new QuanLyBanHangEntities();
             loadcboSP();
             loadDatatoGrid();
         }
         private void saveData()
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
             //save data to chitietHDN
             ChiTietHDX ctHDX = new ChiTietHDX();
             ctHDX.IDHDX = mIDHDX;

@@ -42,8 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.chiTietHDNTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.ChiTietHDNTableAdapter();
-            this.grvHDXDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridCtrHDXDetail = new DevExpress.XtraGrid.GridControl();
+            this.chiTietHDXBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chiTietHDNBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sanPhamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
@@ -55,23 +54,28 @@
             this.txtMaHDX = new System.Windows.Forms.TextBox();
             this.hoaDonNhapTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.HoaDonNhapTableAdapter();
             this.lblheader = new System.Windows.Forms.Label();
-            this.chiTietHDXBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chiTietHDXTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.ChiTietHDXTableAdapter();
-            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colIDHDX = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colIDSP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDonGia = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVAT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grvHDXDetail = new System.Windows.Forms.DataGridView();
+            this.viewChiTietHDXBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.viewChiTietHDXTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.ViewChiTietHDXTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDHDXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donViTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thanhTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.fKChiTietHDNHoaDonNhapBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonNhapBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvHDXDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCtrHDXDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chiTietHDXBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiTietHDNBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPhamBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboSanPham.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chiTietHDXBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvHDXDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewChiTietHDXBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // fKChiTietHDNHoaDonNhapBindingSource
@@ -166,28 +170,10 @@
             // 
             this.chiTietHDNTableAdapter.ClearBeforeFill = true;
             // 
-            // grvHDXDetail
+            // chiTietHDXBindingSource
             // 
-            this.grvHDXDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colID,
-            this.colIDHDX,
-            this.colIDSP,
-            this.colSoLuong,
-            this.colDonGia,
-            this.colVAT});
-            this.grvHDXDetail.GridControl = this.gridCtrHDXDetail;
-            this.grvHDXDetail.Name = "grvHDXDetail";
-            // 
-            // gridCtrHDXDetail
-            // 
-            this.gridCtrHDXDetail.DataSource = this.chiTietHDXBindingSource;
-            this.gridCtrHDXDetail.Location = new System.Drawing.Point(29, 186);
-            this.gridCtrHDXDetail.MainView = this.grvHDXDetail;
-            this.gridCtrHDXDetail.Name = "gridCtrHDXDetail";
-            this.gridCtrHDXDetail.Size = new System.Drawing.Size(827, 351);
-            this.gridCtrHDXDetail.TabIndex = 35;
-            this.gridCtrHDXDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.grvHDXDetail});
+            this.chiTietHDXBindingSource.DataMember = "ChiTietHDX";
+            this.chiTietHDXBindingSource.DataSource = this.quanLyBanHangDataSet;
             // 
             // chiTietHDNBindingSource
             // 
@@ -263,6 +249,7 @@
             // 
             // txtMaHDX
             // 
+            this.txtMaHDX.Enabled = false;
             this.txtMaHDX.Location = new System.Drawing.Point(198, 71);
             this.txtMaHDX.Name = "txtMaHDX";
             this.txtMaHDX.Size = new System.Drawing.Size(164, 20);
@@ -282,62 +269,106 @@
             this.lblheader.TabIndex = 19;
             this.lblheader.Text = "Chi tiết hóa đơn xuất";
             // 
-            // chiTietHDXBindingSource
-            // 
-            this.chiTietHDXBindingSource.DataMember = "ChiTietHDX";
-            this.chiTietHDXBindingSource.DataSource = this.quanLyBanHangDataSet;
-            // 
             // chiTietHDXTableAdapter
             // 
             this.chiTietHDXTableAdapter.ClearBeforeFill = true;
             // 
-            // colID
+            // grvHDXDetail
             // 
-            this.colID.FieldName = "ID";
-            this.colID.Name = "colID";
-            this.colID.Visible = true;
-            this.colID.VisibleIndex = 0;
+            this.grvHDXDetail.AutoGenerateColumns = false;
+            this.grvHDXDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvHDXDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.iDHDXDataGridViewTextBoxColumn,
+            this.iDSPDataGridViewTextBoxColumn,
+            this.tenSPDataGridViewTextBoxColumn,
+            this.soLuongDataGridViewTextBoxColumn,
+            this.donGiaDataGridViewTextBoxColumn,
+            this.donViTinhDataGridViewTextBoxColumn,
+            this.vATDataGridViewTextBoxColumn,
+            this.thanhTienDataGridViewTextBoxColumn});
+            this.grvHDXDetail.DataSource = this.viewChiTietHDXBindingSource;
+            this.grvHDXDetail.Location = new System.Drawing.Point(50, 198);
+            this.grvHDXDetail.Name = "grvHDXDetail";
+            this.grvHDXDetail.Size = new System.Drawing.Size(795, 341);
+            this.grvHDXDetail.TabIndex = 35;
             // 
-            // colIDHDX
+            // viewChiTietHDXBindingSource
             // 
-            this.colIDHDX.FieldName = "IDHDX";
-            this.colIDHDX.Name = "colIDHDX";
-            this.colIDHDX.Visible = true;
-            this.colIDHDX.VisibleIndex = 1;
+            this.viewChiTietHDXBindingSource.DataMember = "ViewChiTietHDX";
+            this.viewChiTietHDXBindingSource.DataSource = this.quanLyBanHangDataSet;
             // 
-            // colIDSP
+            // viewChiTietHDXTableAdapter
             // 
-            this.colIDSP.FieldName = "IDSP";
-            this.colIDSP.Name = "colIDSP";
-            this.colIDSP.Visible = true;
-            this.colIDSP.VisibleIndex = 2;
+            this.viewChiTietHDXTableAdapter.ClearBeforeFill = true;
             // 
-            // colSoLuong
+            // iDDataGridViewTextBoxColumn
             // 
-            this.colSoLuong.FieldName = "SoLuong";
-            this.colSoLuong.Name = "colSoLuong";
-            this.colSoLuong.Visible = true;
-            this.colSoLuong.VisibleIndex = 3;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // colDonGia
+            // iDHDXDataGridViewTextBoxColumn
             // 
-            this.colDonGia.FieldName = "DonGia";
-            this.colDonGia.Name = "colDonGia";
-            this.colDonGia.Visible = true;
-            this.colDonGia.VisibleIndex = 4;
+            this.iDHDXDataGridViewTextBoxColumn.DataPropertyName = "IDHDX";
+            this.iDHDXDataGridViewTextBoxColumn.HeaderText = "IDHDX";
+            this.iDHDXDataGridViewTextBoxColumn.Name = "iDHDXDataGridViewTextBoxColumn";
+            this.iDHDXDataGridViewTextBoxColumn.Visible = false;
             // 
-            // colVAT
+            // iDSPDataGridViewTextBoxColumn
             // 
-            this.colVAT.FieldName = "VAT";
-            this.colVAT.Name = "colVAT";
-            this.colVAT.Visible = true;
-            this.colVAT.VisibleIndex = 5;
+            this.iDSPDataGridViewTextBoxColumn.DataPropertyName = "IDSP";
+            this.iDSPDataGridViewTextBoxColumn.HeaderText = "IDSP";
+            this.iDSPDataGridViewTextBoxColumn.Name = "iDSPDataGridViewTextBoxColumn";
+            this.iDSPDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tenSPDataGridViewTextBoxColumn
+            // 
+            this.tenSPDataGridViewTextBoxColumn.DataPropertyName = "TenSP";
+            this.tenSPDataGridViewTextBoxColumn.HeaderText = "Tên Sản Phẩm";
+            this.tenSPDataGridViewTextBoxColumn.Name = "tenSPDataGridViewTextBoxColumn";
+            this.tenSPDataGridViewTextBoxColumn.Width = 220;
+            // 
+            // soLuongDataGridViewTextBoxColumn
+            // 
+            this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
+            this.soLuongDataGridViewTextBoxColumn.HeaderText = "Số Lượng";
+            this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
+            // 
+            // donGiaDataGridViewTextBoxColumn
+            // 
+            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
+            this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn giá";
+            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
+            // 
+            // donViTinhDataGridViewTextBoxColumn
+            // 
+            this.donViTinhDataGridViewTextBoxColumn.DataPropertyName = "DonViTinh";
+            this.donViTinhDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
+            this.donViTinhDataGridViewTextBoxColumn.Name = "donViTinhDataGridViewTextBoxColumn";
+            // 
+            // vATDataGridViewTextBoxColumn
+            // 
+            this.vATDataGridViewTextBoxColumn.DataPropertyName = "VAT";
+            this.vATDataGridViewTextBoxColumn.HeaderText = "VAT (%)";
+            this.vATDataGridViewTextBoxColumn.Name = "vATDataGridViewTextBoxColumn";
+            this.vATDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // thanhTienDataGridViewTextBoxColumn
+            // 
+            this.thanhTienDataGridViewTextBoxColumn.DataPropertyName = "ThanhTien";
+            this.thanhTienDataGridViewTextBoxColumn.HeaderText = "Thành tiền";
+            this.thanhTienDataGridViewTextBoxColumn.Name = "thanhTienDataGridViewTextBoxColumn";
+            this.thanhTienDataGridViewTextBoxColumn.ReadOnly = true;
+            this.thanhTienDataGridViewTextBoxColumn.Width = 150;
             // 
             // frmChiTietHDX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.grvHDXDetail);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label9);
@@ -346,7 +377,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSoLuong);
-            this.Controls.Add(this.gridCtrHDXDetail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDonGia);
@@ -362,12 +392,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.fKChiTietHDNHoaDonNhapBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonNhapBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvHDXDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCtrHDXDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chiTietHDXBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiTietHDNBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPhamBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboSanPham.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chiTietHDXBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvHDXDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewChiTietHDXBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,8 +418,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSoLuong;
         private DataSet.QuanLyBanHangDataSetTableAdapters.ChiTietHDNTableAdapter chiTietHDNTableAdapter;
-        private DevExpress.XtraGrid.Views.Grid.GridView grvHDXDetail;
-        private DevExpress.XtraGrid.GridControl gridCtrHDXDetail;
         private System.Windows.Forms.BindingSource chiTietHDNBindingSource;
         private System.Windows.Forms.BindingSource sanPhamBindingSource;
         private System.Windows.Forms.Label label3;
@@ -403,11 +431,17 @@
         private System.Windows.Forms.Label lblheader;
         private System.Windows.Forms.BindingSource chiTietHDXBindingSource;
         private DataSet.QuanLyBanHangDataSetTableAdapters.ChiTietHDXTableAdapter chiTietHDXTableAdapter;
-        private DevExpress.XtraGrid.Columns.GridColumn colID;
-        private DevExpress.XtraGrid.Columns.GridColumn colIDHDX;
-        private DevExpress.XtraGrid.Columns.GridColumn colIDSP;
-        private DevExpress.XtraGrid.Columns.GridColumn colSoLuong;
-        private DevExpress.XtraGrid.Columns.GridColumn colDonGia;
-        private DevExpress.XtraGrid.Columns.GridColumn colVAT;
+        private System.Windows.Forms.DataGridView grvHDXDetail;
+        private System.Windows.Forms.BindingSource viewChiTietHDXBindingSource;
+        private DataSet.QuanLyBanHangDataSetTableAdapters.ViewChiTietHDXTableAdapter viewChiTietHDXTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDHDXDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDSPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenSPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donViTinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vATDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thanhTienDataGridViewTextBoxColumn;
     }
 }
