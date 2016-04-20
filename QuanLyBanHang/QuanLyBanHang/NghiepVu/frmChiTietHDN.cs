@@ -17,6 +17,7 @@ namespace QuanLyBanHang.NghiepVu
     {
         String mMaHDN;
         long mIDHDN;
+        QuanLyBanHangEntities db;
 
         public frmChiTietHDN()
         {
@@ -36,20 +37,24 @@ namespace QuanLyBanHang.NghiepVu
         }
         private void loadDatatoGridView()
         {
-            this.chiTietHDNTableAdapter.Fill(this.quanLyBanHangDataSet.ChiTietHDN);
+            grvHDNDetail.DataSource = db.ViewChiTietHDNs.Where(x => x.IDHDN == mIDHDN)
+                                                        .ToList();
+            grvHDNDetail.Refresh();
         }
 
         private void frmChiTietHDN_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyBanHangDataSet.ViewChiTietHDN' table. You can move, or remove it, as needed.
+            this.viewChiTietHDNTableAdapter.Fill(this.quanLyBanHangDataSet.ViewChiTietHDN);
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.HoaDonNhap' table. You can move, or remove it, as needed.
             this.hoaDonNhapTableAdapter.Fill(this.quanLyBanHangDataSet.HoaDonNhap);
             loadcboSP();
+            db = new QuanLyBanHangEntities();
             loadDatatoGridView();
         }
 
         private void saveData()
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
             //save data to chitietHDN
             ChiTietHDN ctHDN = new ChiTietHDN();
             ctHDN.IDHDN = mIDHDN;
