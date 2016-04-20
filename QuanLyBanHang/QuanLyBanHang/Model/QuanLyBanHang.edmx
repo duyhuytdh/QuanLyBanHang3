@@ -16,6 +16,32 @@
           <EntitySet Name="SanPham" EntityType="QuanLyBanHangModel.Store.SanPham" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="sysdiagrams" EntityType="QuanLyBanHangModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TaiKhoan" EntityType="QuanLyBanHangModel.Store.TaiKhoan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ViewChiTietHDN" EntityType="QuanLyBanHangModel.Store.ViewChiTietHDN" store:Type="Views" store:Schema="dbo" store:Name="ViewChiTietHDN">
+            <DefiningQuery>SELECT 
+      [ViewChiTietHDN].[ID] AS [ID], 
+      [ViewChiTietHDN].[IDHDN] AS [IDHDN], 
+      [ViewChiTietHDN].[IDSP] AS [IDSP], 
+      [ViewChiTietHDN].[SoLuong] AS [SoLuong], 
+      [ViewChiTietHDN].[Dongia] AS [Dongia], 
+      [ViewChiTietHDN].[VAT] AS [VAT], 
+      [ViewChiTietHDN].[TenSP] AS [TenSP], 
+      [ViewChiTietHDN].[DonViTinh] AS [DonViTinh], 
+      [ViewChiTietHDN].[ThanhTien] AS [ThanhTien]
+      FROM [dbo].[ViewChiTietHDN] AS [ViewChiTietHDN]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewChiTietHDX" EntityType="QuanLyBanHangModel.Store.ViewChiTietHDX" store:Type="Views" store:Schema="dbo" store:Name="ViewChiTietHDX">
+            <DefiningQuery>SELECT 
+      [ViewChiTietHDX].[ID] AS [ID], 
+      [ViewChiTietHDX].[IDHDX] AS [IDHDX], 
+      [ViewChiTietHDX].[IDSP] AS [IDSP], 
+      [ViewChiTietHDX].[SoLuong] AS [SoLuong], 
+      [ViewChiTietHDX].[DonGia] AS [DonGia], 
+      [ViewChiTietHDX].[VAT] AS [VAT], 
+      [ViewChiTietHDX].[TenSP] AS [TenSP], 
+      [ViewChiTietHDX].[DonViTinh] AS [DonViTinh], 
+      [ViewChiTietHDX].[ThanhTien] AS [ThanhTien]
+      FROM [dbo].[ViewChiTietHDX] AS [ViewChiTietHDX]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="ViewDatHang" EntityType="QuanLyBanHangModel.Store.ViewDatHang" store:Type="Views" store:Schema="dbo" store:Name="ViewDatHang">
             <DefiningQuery>SELECT 
       [ViewDatHang].[SoLuong] AS [SoLuong], 
@@ -189,6 +215,54 @@
           <Property Name="MatKhau" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="NgayTao" Type="datetime" Nullable="false" />
           <Property Name="AdminYN" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'QuanLyBanHang.dbo.ViewChiTietHDN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ViewChiTietHDN">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="IDHDN" />
+            <PropertyRef Name="IDSP" />
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="Dongia" />
+            <PropertyRef Name="VAT" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="DonViTinh" />
+            <PropertyRef Name="ThanhTien" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="IDHDN" Type="bigint" Nullable="false" />
+          <Property Name="IDSP" Type="bigint" Nullable="false" />
+          <Property Name="SoLuong" Type="float" Nullable="false" />
+          <Property Name="Dongia" Type="float" Nullable="false" />
+          <Property Name="VAT" Type="float" Nullable="false" />
+          <Property Name="TenSP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DonViTinh" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ThanhTien" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'QuanLyBanHang.dbo.ViewChiTietHDX' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ViewChiTietHDX">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="IDHDX" />
+            <PropertyRef Name="IDSP" />
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="DonGia" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="DonViTinh" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="IDHDX" Type="bigint" Nullable="false" />
+          <Property Name="IDSP" Type="bigint" Nullable="false" />
+          <Property Name="SoLuong" Type="float" Nullable="false" />
+          <Property Name="DonGia" Type="float" Nullable="false" />
+          <Property Name="VAT" Type="float" />
+          <Property Name="TenSP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DonViTinh" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ThanhTien" Type="float" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'QuanLyBanHang.dbo.ViewDatHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -393,6 +467,8 @@
             <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
             <End Role="SanPham" EntitySet="SanPhams" />
           </AssociationSet>
+          <EntitySet Name="ViewChiTietHDNs" EntityType="QuanLyBanHangModel.ViewChiTietHDN" />
+          <EntitySet Name="ViewChiTietHDXes" EntityType="QuanLyBanHangModel.ViewChiTietHDX" />
         </EntityContainer>
         <EntityType Name="ChiTietHDN">
           <Key>
@@ -670,6 +746,48 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="ViewChiTietHDN">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="IDHDN" />
+            <PropertyRef Name="IDSP" />
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="Dongia" />
+            <PropertyRef Name="VAT" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="DonViTinh" />
+            <PropertyRef Name="ThanhTien" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int64" Name="IDHDN" Nullable="false" />
+          <Property Type="Int64" Name="IDSP" Nullable="false" />
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="Double" Name="Dongia" Nullable="false" />
+          <Property Type="Double" Name="VAT" Nullable="false" />
+          <Property Type="String" Name="TenSP" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DonViTinh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="ThanhTien" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ViewChiTietHDX">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="IDHDX" />
+            <PropertyRef Name="IDSP" />
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="DonGia" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="DonViTinh" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int64" Name="IDHDX" Nullable="false" />
+          <Property Type="Int64" Name="IDSP" Nullable="false" />
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="Double" Name="DonGia" Nullable="false" />
+          <Property Type="Double" Name="VAT" />
+          <Property Type="String" Name="TenSP" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DonViTinh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="ThanhTien" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -824,6 +942,36 @@
                 <ScalarProperty Name="TenSP" ColumnName="TenSP" />
                 <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
                 <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewChiTietHDNs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.ViewChiTietHDN">
+              <MappingFragment StoreEntitySet="ViewChiTietHDN">
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="Dongia" ColumnName="Dongia" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+                <ScalarProperty Name="IDHDN" ColumnName="IDHDN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewChiTietHDXes">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.ViewChiTietHDX">
+              <MappingFragment StoreEntitySet="ViewChiTietHDX">
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+                <ScalarProperty Name="IDHDX" ColumnName="IDHDX" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

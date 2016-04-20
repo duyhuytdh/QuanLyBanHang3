@@ -37,5 +37,7 @@ namespace QuanLyBanHang.Model
         public DbSet<TaiKhoan> TaiKhoans { get; set; }
         public DbSet<ViewDatHang> ViewDatHangs { get; set; }
         public DbSet<ViewSanPham> ViewSanPhams { get; set; }
+        public DbSet<ViewChiTietHDN> ViewChiTietHDNs { get; set; }
+        public DbSet<ViewChiTietHDX> ViewChiTietHDXes { get; set; }
     }
 }

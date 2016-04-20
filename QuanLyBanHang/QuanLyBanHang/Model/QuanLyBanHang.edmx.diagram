@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="QuanLyBanHangModel.ChiTietHDN" Width="1.5" PointX="4.2107953355697889" PointY="17.644944392910666" />
         <EntityTypeShape EntityType="QuanLyBanHangModel.ChiTietHDX" Width="1.5" PointX="8.3581644912986839" PointY="23.054291348463991" />
         <EntityTypeShape EntityType="QuanLyBanHangModel.DatHang" Width="1.5" PointX="5.5687455635372292" PointY="0.86829943995377956" />
-        <EntityTypeShape EntityType="QuanLyBanHangModel.HoaDonNhap" Width="1.5" PointX="2.8410829393384436" PointY="3.9787181783368428" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.HoaDonNhap" Width="1.5" PointX="3.5" PointY="4.125" />
         <EntityTypeShape EntityType="QuanLyBanHangModel.HoaDonXuat" Width="1.5" PointX="0.93843467204758657" PointY="24.81597456001489" />
         <EntityTypeShape EntityType="QuanLyBanHangModel.LoaiSanPham" Width="1.5" PointX="5.3854505295797486" PointY="23.977493267495881" />
         <EntityTypeShape EntityType="QuanLyBanHangModel.NhaCungCap" Width="1.5" PointX="0.99678621301277825" PointY="29.022242306276336" />
@@ -26,6 +26,8 @@
         <AssociationConnector Association="QuanLyBanHangModel.FK_HoaDonXuat_TaiKhoan" />
         <AssociationConnector Association="QuanLyBanHangModel.FK_SanPham_LoaiSanPham1" />
         <AssociationConnector Association="QuanLyBanHangModel.FK_SanPham_NhaCungCap" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.ViewChiTietHDN" Width="1.5" PointX="6.6273206521884163" PointY="3.1076283767389268" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.ViewChiTietHDX" Width="1.5" PointX="6.1217119088963194" PointY="23.617485072285628" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
