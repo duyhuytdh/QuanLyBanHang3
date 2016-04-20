@@ -136,6 +136,12 @@
     <Compile Include="Model\sysdiagram.cs">
       <DependentUpon>QuanLyBanHang.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ViewChiTietHDN.cs">
+      <DependentUpon>QuanLyBanHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewChiTietHDX.cs">
+      <DependentUpon>QuanLyBanHang.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\ViewDatHang.cs">
       <DependentUpon>QuanLyBanHang.tt</DependentUpon>
     </Compile>
