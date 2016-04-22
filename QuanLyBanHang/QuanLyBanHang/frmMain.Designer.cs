@@ -42,7 +42,7 @@
             this.menuItemNhapHang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemXuatHang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBaoCao = new System.Windows.Forms.ToolStripMenuItem();
-            this.báoCáoDoanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem_BCDoanhThu = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoNhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoXuấtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoTồnKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,21 +106,21 @@
             // menuItemSP
             // 
             this.menuItemSP.Name = "menuItemSP";
-            this.menuItemSP.Size = new System.Drawing.Size(152, 22);
+            this.menuItemSP.Size = new System.Drawing.Size(151, 22);
             this.menuItemSP.Text = "Sản phẩm";
             this.menuItemSP.Click += new System.EventHandler(this.menuItemSP_Click);
             // 
             // menuItemNhaCungCap
             // 
             this.menuItemNhaCungCap.Name = "menuItemNhaCungCap";
-            this.menuItemNhaCungCap.Size = new System.Drawing.Size(152, 22);
+            this.menuItemNhaCungCap.Size = new System.Drawing.Size(151, 22);
             this.menuItemNhaCungCap.Text = "Nhà cung cấp";
             this.menuItemNhaCungCap.Click += new System.EventHandler(this.menuItemNhaCungCap_Click);
             // 
             // menuItemLoaiSP
             // 
             this.menuItemLoaiSP.Name = "menuItemLoaiSP";
-            this.menuItemLoaiSP.Size = new System.Drawing.Size(152, 22);
+            this.menuItemLoaiSP.Size = new System.Drawing.Size(151, 22);
             this.menuItemLoaiSP.Text = "Loại sản phẩm";
             this.menuItemLoaiSP.Click += new System.EventHandler(this.menuItemLoaiSP_Click);
             // 
@@ -158,7 +158,7 @@
             // menuBaoCao
             // 
             this.menuBaoCao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.báoCáoDoanhThuToolStripMenuItem,
+            this.menuItem_BCDoanhThu,
             this.báoCáoNhậpHàngToolStripMenuItem,
             this.báoCáoXuấtHàngToolStripMenuItem,
             this.báoCáoTồnKhoToolStripMenuItem});
@@ -166,11 +166,12 @@
             this.menuBaoCao.Size = new System.Drawing.Size(61, 20);
             this.menuBaoCao.Text = "Báo cáo";
             // 
-            // báoCáoDoanhThuToolStripMenuItem
+            // menuItem_BCDoanhThu
             // 
-            this.báoCáoDoanhThuToolStripMenuItem.Name = "báoCáoDoanhThuToolStripMenuItem";
-            this.báoCáoDoanhThuToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.báoCáoDoanhThuToolStripMenuItem.Text = "Báo cáo doanh thu";
+            this.menuItem_BCDoanhThu.Name = "menuItem_BCDoanhThu";
+            this.menuItem_BCDoanhThu.Size = new System.Drawing.Size(176, 22);
+            this.menuItem_BCDoanhThu.Text = "Báo cáo doanh thu";
+            this.menuItem_BCDoanhThu.Click += new System.EventHandler(this.menuItem_BCDoanhThu_Click);
             // 
             // báoCáoNhậpHàngToolStripMenuItem
             // 
@@ -228,7 +229,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuItemDatHang;
         private System.Windows.Forms.ToolStripMenuItem menuItemNhapHang;
         private System.Windows.Forms.ToolStripMenuItem menuItemXuatHang;
-        private System.Windows.Forms.ToolStripMenuItem báoCáoDoanhThuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuItem_BCDoanhThu;
         private System.Windows.Forms.ToolStripMenuItem báoCáoNhậpHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoXuấtHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoTồnKhoToolStripMenuItem;

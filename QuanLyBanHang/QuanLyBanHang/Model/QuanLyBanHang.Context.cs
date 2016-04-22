@@ -39,5 +39,6 @@ namespace QuanLyBanHang.Model
         public DbSet<ViewSanPham> ViewSanPhams { get; set; }
         public DbSet<ViewChiTietHDN> ViewChiTietHDNs { get; set; }
         public DbSet<ViewChiTietHDX> ViewChiTietHDXes { get; set; }
+        public DbSet<ViewTongHopHDN> ViewTongHopHDNs { get; set; }
     }
 }

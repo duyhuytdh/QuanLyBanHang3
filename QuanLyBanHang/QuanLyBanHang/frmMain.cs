@@ -10,7 +10,9 @@ using System.Windows.Forms;
 using QuanLyBanHang.DanhMuc;
 using QuanLyBanHang.HeThong;
 using QuanLyBanHang.NghiepVu;
+using QuanLyBanHang.BaoCao;
 using QuanLyBanHang.Help;
+using DevExpress.XtraReports.UI;
 
 namespace QuanLyBanHang
 {
@@ -95,6 +97,13 @@ namespace QuanLyBanHang
             frm.ShowDialog();
         }
         #endregion
+
+        private void menuItem_BCDoanhThu_Click(object sender, EventArgs e)
+        {
+            BCNhapHang bc = new BCNhapHang();
+            ReportPrintTool tool = new ReportPrintTool(bc);
+            tool.ShowPreviewDialog();
+        }
 
         #endregion
 
