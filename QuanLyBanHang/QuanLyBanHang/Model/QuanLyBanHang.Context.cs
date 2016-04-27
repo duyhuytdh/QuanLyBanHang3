@@ -12,6 +12,9 @@ namespace QuanLyBanHang.Model
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class QuanLyBanHangEntities : DbContext
     {
@@ -40,5 +43,7 @@ namespace QuanLyBanHang.Model
         public DbSet<ViewChiTietHDN> ViewChiTietHDNs { get; set; }
         public DbSet<ViewChiTietHDX> ViewChiTietHDXes { get; set; }
         public DbSet<ViewTongHopHDN> ViewTongHopHDNs { get; set; }
+        public DbSet<ViewTongHopHDX> ViewTongHopHDXes { get; set; }
+        public DbSet<ViewTongHopTonKho> ViewTongHopTonKhoes { get; set; }
     }
 }

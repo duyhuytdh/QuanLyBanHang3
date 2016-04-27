@@ -29,6 +29,8 @@
         <EntityTypeShape EntityType="QuanLyBanHangModel.ViewChiTietHDN" Width="1.5" PointX="6.6273206521884163" PointY="3.1076283767389268" />
         <EntityTypeShape EntityType="QuanLyBanHangModel.ViewChiTietHDX" Width="1.5" PointX="6.1217119088963194" PointY="23.617485072285628" />
         <EntityTypeShape EntityType="QuanLyBanHangModel.ViewTongHopHDN" Width="1.5" PointX="1.7509492364483648" PointY="4.2794609983821683" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.ViewTongHopHDX" Width="1.5" PointX="2.4996196322606972" PointY="5.126915934089066" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.ViewTongHopTonKho" Width="1.5" PointX="9.8187008936976561" PointY="5.3180053705899066" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

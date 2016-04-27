@@ -98,14 +98,41 @@ namespace QuanLyBanHang
         }
         #endregion
 
+        #region Bao Cao
+
         private void menuItem_BCDoanhThu_Click(object sender, EventArgs e)
+        {
+            BCDoanhThu bc = new BCDoanhThu();
+            ReportPrintTool tool = new ReportPrintTool(bc);
+            tool.ShowPreviewDialog();
+        }
+
+        private void ItemBaoCaoNhapHang_Click(object sender, EventArgs e)
         {
             BCNhapHang bc = new BCNhapHang();
             ReportPrintTool tool = new ReportPrintTool(bc);
             tool.ShowPreviewDialog();
         }
 
+        private void menuItemBCXuatHang_Click(object sender, EventArgs e)
+        {
+            BCXuatHang bc = new BCXuatHang();
+            ReportPrintTool tool = new ReportPrintTool(bc);
+            tool.ShowPreviewDialog();
+        }
+
+        private void menuItemBCTonKho_Click(object sender, EventArgs e)
+        {
+            BCTonKho bc = new BCTonKho();
+            ReportPrintTool tool = new ReportPrintTool(bc);
+            tool.ShowPreviewDialog();
+        }
+
         #endregion
+
+        #endregion
+
+   
 
 
     }

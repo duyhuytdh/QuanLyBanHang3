@@ -79,6 +79,34 @@
       [ViewTongHopHDN].[ThanhTien] AS [ThanhTien]
       FROM [dbo].[ViewTongHopHDN] AS [ViewTongHopHDN]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="ViewTongHopHDX" EntityType="QuanLyBanHangModel.Store.ViewTongHopHDX" store:Type="Views" store:Schema="dbo" store:Name="ViewTongHopHDX">
+            <DefiningQuery>SELECT 
+      [ViewTongHopHDX].[SoLuong] AS [SoLuong], 
+      [ViewTongHopHDX].[ID] AS [ID], 
+      [ViewTongHopHDX].[MaHDX] AS [MaHDX], 
+      [ViewTongHopHDX].[NgayXuat] AS [NgayXuat], 
+      [ViewTongHopHDX].[TenSP] AS [TenSP], 
+      [ViewTongHopHDX].[DonViTinh] AS [DonViTinh], 
+      [ViewTongHopHDX].[TongTien] AS [TongTien], 
+      [ViewTongHopHDX].[TaiKhoan] AS [TaiKhoan], 
+      [ViewTongHopHDX].[DonGia] AS [DonGia], 
+      [ViewTongHopHDX].[VAT] AS [VAT], 
+      [ViewTongHopHDX].[ThanhTien] AS [ThanhTien]
+      FROM [dbo].[ViewTongHopHDX] AS [ViewTongHopHDX]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewTongHopTonKho" EntityType="QuanLyBanHangModel.Store.ViewTongHopTonKho" store:Type="Views" store:Schema="dbo" store:Name="ViewTongHopTonKho">
+            <DefiningQuery>SELECT 
+      [ViewTongHopTonKho].[ID] AS [ID], 
+      [ViewTongHopTonKho].[TenNCC] AS [TenNCC], 
+      [ViewTongHopTonKho].[IDLoaiSP] AS [IDLoaiSP], 
+      [ViewTongHopTonKho].[MaSP] AS [MaSP], 
+      [ViewTongHopTonKho].[TenSP] AS [TenSP], 
+      [ViewTongHopTonKho].[SoLuong] AS [SoLuong], 
+      [ViewTongHopTonKho].[GiaNhap] AS [GiaNhap], 
+      [ViewTongHopTonKho].[GiaBan] AS [GiaBan], 
+      [ViewTongHopTonKho].[DonViTinh] AS [DonViTinh]
+      FROM [dbo].[ViewTongHopTonKho] AS [ViewTongHopTonKho]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_ChiTietHDN_HoaDonNhap" Association="QuanLyBanHangModel.Store.FK_ChiTietHDN_HoaDonNhap">
             <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
             <End Role="ChiTietHDN" EntitySet="ChiTietHDN" />
@@ -347,6 +375,58 @@
           <Property Name="NgayNhap" Type="datetime" Nullable="false" />
           <Property Name="ThanhTien" Type="float" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'QuanLyBanHang.dbo.ViewTongHopHDX' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ViewTongHopHDX">
+          <Key>
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="MaHDX" />
+            <PropertyRef Name="NgayXuat" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="DonViTinh" />
+            <PropertyRef Name="TongTien" />
+            <PropertyRef Name="TaiKhoan" />
+            <PropertyRef Name="DonGia" />
+          </Key>
+          <Property Name="SoLuong" Type="float" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="MaHDX" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="NgayXuat" Type="datetime" Nullable="false" />
+          <Property Name="TenSP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DonViTinh" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TongTien" Type="float" Nullable="false" />
+          <Property Name="TaiKhoan" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DonGia" Type="float" Nullable="false" />
+          <Property Name="VAT" Type="float" />
+          <Property Name="ThanhTien" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'QuanLyBanHang.dbo.ViewTongHopTonKho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ViewTongHopTonKho">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="TenNCC" />
+            <PropertyRef Name="IDLoaiSP" />
+            <PropertyRef Name="MaSP" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="GiaNhap" />
+            <PropertyRef Name="GiaBan" />
+            <PropertyRef Name="DonViTinh" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="TenNCC" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IDLoaiSP" Type="bigint" Nullable="false" />
+          <Property Name="MaSP" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TenSP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SoLuong" Type="float" Nullable="false" />
+          <Property Name="GiaNhap" Type="float" Nullable="false" />
+          <Property Name="GiaBan" Type="float" Nullable="false" />
+          <Property Name="DonViTinh" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
         <Association Name="FK_ChiTietHDN_HoaDonNhap">
           <End Role="HoaDonNhap" Type="QuanLyBanHangModel.Store.HoaDonNhap" Multiplicity="1" />
           <End Role="ChiTietHDN" Type="QuanLyBanHangModel.Store.ChiTietHDN" Multiplicity="*" />
@@ -455,6 +535,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="pr_bc_doanh_thu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tu_ngay" Type="datetime" Mode="In" />
+          <Parameter Name="den_ngay" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="pr_bc_nhap_hang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tu_ngay" Type="datetime" Mode="In" />
+          <Parameter Name="den_ngay" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="pr_bc_xuat_hang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tu_ngay" Type="datetime" Mode="In" />
+          <Parameter Name="den_ngay" Type="datetime" Mode="In" />
+        </Function>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -511,6 +603,20 @@
           <EntitySet Name="ViewChiTietHDNs" EntityType="QuanLyBanHangModel.ViewChiTietHDN" />
           <EntitySet Name="ViewChiTietHDXes" EntityType="QuanLyBanHangModel.ViewChiTietHDX" />
           <EntitySet Name="ViewTongHopHDNs" EntityType="QuanLyBanHangModel.ViewTongHopHDN" />
+          <EntitySet Name="ViewTongHopHDXes" EntityType="QuanLyBanHangModel.ViewTongHopHDX" />
+          <EntitySet Name="ViewTongHopTonKhoes" EntityType="QuanLyBanHangModel.ViewTongHopTonKho" />
+          <FunctionImport Name="pr_bc_doanh_thu" ReturnType="Collection(QuanLyBanHangModel.pr_bc_doanh_thu_Result)">
+            <Parameter Name="tu_ngay" Mode="In" Type="DateTime" />
+            <Parameter Name="den_ngay" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="pr_bc_nhap_hang" ReturnType="Collection(QuanLyBanHangModel.pr_bc_nhap_hang_Result)">
+            <Parameter Name="tu_ngay" Mode="In" Type="DateTime" />
+            <Parameter Name="den_ngay" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="pr_bc_xuat_hang" ReturnType="Collection(QuanLyBanHangModel.pr_bc_xuat_hang_Result)">
+            <Parameter Name="tu_ngay" Mode="In" Type="DateTime" />
+            <Parameter Name="den_ngay" Mode="In" Type="DateTime" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="ChiTietHDN">
           <Key>
@@ -854,6 +960,82 @@
           <Property Type="Double" Name="TongTien" Nullable="false" />
           <Property Type="Double" Name="ThanhTien" Nullable="false" />
         </EntityType>
+        <EntityType Name="ViewTongHopHDX">
+          <Key>
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="MaHDX" />
+            <PropertyRef Name="NgayXuat" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="DonViTinh" />
+            <PropertyRef Name="TongTien" />
+            <PropertyRef Name="TaiKhoan" />
+            <PropertyRef Name="DonGia" />
+          </Key>
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="MaHDX" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayXuat" Nullable="false" Precision="3" />
+          <Property Type="String" Name="TenSP" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DonViTinh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="TongTien" Nullable="false" />
+          <Property Type="String" Name="TaiKhoan" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="DonGia" Nullable="false" />
+          <Property Type="Double" Name="VAT" />
+          <Property Type="Double" Name="ThanhTien" />
+        </EntityType>
+        <EntityType Name="ViewTongHopTonKho">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="TenNCC" />
+            <PropertyRef Name="IDLoaiSP" />
+            <PropertyRef Name="MaSP" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="GiaNhap" />
+            <PropertyRef Name="GiaBan" />
+            <PropertyRef Name="DonViTinh" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="TenNCC" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="IDLoaiSP" Nullable="false" />
+          <Property Type="String" Name="MaSP" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TenSP" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="Double" Name="GiaNhap" Nullable="false" />
+          <Property Type="Double" Name="GiaBan" Nullable="false" />
+          <Property Type="String" Name="DonViTinh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="pr_bc_doanh_thu_Result">
+          <Property Type="Double" Name="TongXuat" Nullable="true" />
+          <Property Type="Double" Name="TongNhap" Nullable="true" />
+          <Property Type="Double" Name="LoiNhuan" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="pr_bc_nhap_hang_Result">
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="Double" Name="Dongia" Nullable="false" />
+          <Property Type="Double" Name="VAT" Nullable="false" />
+          <Property Type="String" Name="MaHDN" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="TenNCC" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TenSP" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TaiKhoan" Nullable="false" MaxLength="50" />
+          <Property Type="Double" Name="TongTien" Nullable="false" />
+          <Property Type="DateTime" Name="NgayNhap" Nullable="false" Precision="23" />
+          <Property Type="Double" Name="ThanhTien" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="pr_bc_xuat_hang_Result">
+          <Property Type="Double" Name="SoLuong" Nullable="false" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="MaHDX" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="NgayXuat" Nullable="false" Precision="23" />
+          <Property Type="String" Name="TenSP" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="DonViTinh" Nullable="false" MaxLength="50" />
+          <Property Type="Double" Name="TongTien" Nullable="false" />
+          <Property Type="String" Name="TaiKhoan" Nullable="false" MaxLength="50" />
+          <Property Type="Double" Name="DonGia" Nullable="false" />
+          <Property Type="Double" Name="VAT" Nullable="true" />
+          <Property Type="Double" Name="ThanhTien" Nullable="true" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1057,6 +1239,80 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ViewTongHopHDXes">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.ViewTongHopHDX">
+              <MappingFragment StoreEntitySet="ViewTongHopHDX">
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="NgayXuat" ColumnName="NgayXuat" />
+                <ScalarProperty Name="MaHDX" ColumnName="MaHDX" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewTongHopTonKhoes">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.ViewTongHopTonKho">
+              <MappingFragment StoreEntitySet="ViewTongHopTonKho">
+                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+                <ScalarProperty Name="GiaBan" ColumnName="GiaBan" />
+                <ScalarProperty Name="GiaNhap" ColumnName="GiaNhap" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="IDLoaiSP" ColumnName="IDLoaiSP" />
+                <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="pr_bc_doanh_thu" FunctionName="QuanLyBanHangModel.Store.pr_bc_doanh_thu">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyBanHangModel.pr_bc_doanh_thu_Result">
+                <ScalarProperty Name="TongXuat" ColumnName="TongXuat" />
+                <ScalarProperty Name="TongNhap" ColumnName="TongNhap" />
+                <ScalarProperty Name="LoiNhuan" ColumnName="LoiNhuan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="pr_bc_nhap_hang" FunctionName="QuanLyBanHangModel.Store.pr_bc_nhap_hang">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyBanHangModel.pr_bc_nhap_hang_Result">
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="Dongia" ColumnName="Dongia" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="MaHDN" ColumnName="MaHDN" />
+                <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="pr_bc_xuat_hang" FunctionName="QuanLyBanHangModel.Store.pr_bc_xuat_hang">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyBanHangModel.pr_bc_xuat_hang_Result">
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MaHDX" ColumnName="MaHDX" />
+                <ScalarProperty Name="NgayXuat" ColumnName="NgayXuat" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

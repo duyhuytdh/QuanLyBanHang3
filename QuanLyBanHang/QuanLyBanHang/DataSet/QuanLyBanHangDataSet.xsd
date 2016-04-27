@@ -777,6 +777,56 @@ SELECT ID, TaiKhoan, MatKhau, NgayTao, AdminYN FROM TaiKhoan WHERE (ID = @ID)</C
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewTongHopHDXTableAdapter" GeneratorDataComponentClassName="ViewTongHopHDXTableAdapter" Name="ViewTongHopHDX" UserDataComponentName="ViewTongHopHDXTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QuanLyBanHangConnectionString (Settings)" DbObjectName="QuanLyBanHang.dbo.ViewTongHopHDX" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SoLuong, ID, MaHDX, NgayXuat, TenSP, DonViTinh, TongTien, TaiKhoan, DonGia, VAT, ThanhTien FROM dbo.ViewTongHopHDX</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SoLuong" DataSetColumn="SoLuong" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="MaHDX" DataSetColumn="MaHDX" />
+              <Mapping SourceColumn="NgayXuat" DataSetColumn="NgayXuat" />
+              <Mapping SourceColumn="TenSP" DataSetColumn="TenSP" />
+              <Mapping SourceColumn="DonViTinh" DataSetColumn="DonViTinh" />
+              <Mapping SourceColumn="TongTien" DataSetColumn="TongTien" />
+              <Mapping SourceColumn="TaiKhoan" DataSetColumn="TaiKhoan" />
+              <Mapping SourceColumn="DonGia" DataSetColumn="DonGia" />
+              <Mapping SourceColumn="VAT" DataSetColumn="VAT" />
+              <Mapping SourceColumn="ThanhTien" DataSetColumn="ThanhTien" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewTongHopTonKhoTableAdapter" GeneratorDataComponentClassName="ViewTongHopTonKhoTableAdapter" Name="ViewTongHopTonKho" UserDataComponentName="ViewTongHopTonKhoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QuanLyBanHangConnectionString (Settings)" DbObjectName="QuanLyBanHang.dbo.ViewTongHopTonKho" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, TenNCC, IDLoaiSP, MaSP, TenSP, SoLuong, GiaNhap, GiaBan, DonViTinh FROM dbo.ViewTongHopTonKho</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="TenNCC" DataSetColumn="TenNCC" />
+              <Mapping SourceColumn="IDLoaiSP" DataSetColumn="IDLoaiSP" />
+              <Mapping SourceColumn="MaSP" DataSetColumn="MaSP" />
+              <Mapping SourceColumn="TenSP" DataSetColumn="TenSP" />
+              <Mapping SourceColumn="SoLuong" DataSetColumn="SoLuong" />
+              <Mapping SourceColumn="GiaNhap" DataSetColumn="GiaNhap" />
+              <Mapping SourceColumn="GiaBan" DataSetColumn="GiaBan" />
+              <Mapping SourceColumn="DonViTinh" DataSetColumn="DonViTinh" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1229,6 +1279,86 @@ SELECT ID, TaiKhoan, MatKhau, NgayTao, AdminYN FROM TaiKhoan WHERE (ID = @ID)</C
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ViewTongHopHDX" msprop:Generator_TableClassName="ViewTongHopHDXDataTable" msprop:Generator_TableVarName="tableViewTongHopHDX" msprop:Generator_RowChangedName="ViewTongHopHDXRowChanged" msprop:Generator_TablePropName="ViewTongHopHDX" msprop:Generator_RowDeletingName="ViewTongHopHDXRowDeleting" msprop:Generator_RowChangingName="ViewTongHopHDXRowChanging" msprop:Generator_RowEvHandlerName="ViewTongHopHDXRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewTongHopHDXRowDeleted" msprop:Generator_RowClassName="ViewTongHopHDXRow" msprop:Generator_UserTableName="ViewTongHopHDX" msprop:Generator_RowEvArgName="ViewTongHopHDXRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SoLuong" msprop:Generator_ColumnVarNameInTable="columnSoLuong" msprop:Generator_ColumnPropNameInRow="SoLuong" msprop:Generator_ColumnPropNameInTable="SoLuongColumn" msprop:Generator_UserColumnName="SoLuong" type="xs:double" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:long" />
+              <xs:element name="MaHDX" msprop:Generator_ColumnVarNameInTable="columnMaHDX" msprop:Generator_ColumnPropNameInRow="MaHDX" msprop:Generator_ColumnPropNameInTable="MaHDXColumn" msprop:Generator_UserColumnName="MaHDX">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NgayXuat" msprop:Generator_ColumnVarNameInTable="columnNgayXuat" msprop:Generator_ColumnPropNameInRow="NgayXuat" msprop:Generator_ColumnPropNameInTable="NgayXuatColumn" msprop:Generator_UserColumnName="NgayXuat" type="xs:dateTime" />
+              <xs:element name="TenSP" msprop:Generator_ColumnVarNameInTable="columnTenSP" msprop:Generator_ColumnPropNameInRow="TenSP" msprop:Generator_ColumnPropNameInTable="TenSPColumn" msprop:Generator_UserColumnName="TenSP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DonViTinh" msprop:Generator_ColumnVarNameInTable="columnDonViTinh" msprop:Generator_ColumnPropNameInRow="DonViTinh" msprop:Generator_ColumnPropNameInTable="DonViTinhColumn" msprop:Generator_UserColumnName="DonViTinh">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TongTien" msprop:Generator_ColumnVarNameInTable="columnTongTien" msprop:Generator_ColumnPropNameInRow="TongTien" msprop:Generator_ColumnPropNameInTable="TongTienColumn" msprop:Generator_UserColumnName="TongTien" type="xs:double" />
+              <xs:element name="TaiKhoan" msprop:Generator_ColumnVarNameInTable="columnTaiKhoan" msprop:Generator_ColumnPropNameInRow="TaiKhoan" msprop:Generator_ColumnPropNameInTable="TaiKhoanColumn" msprop:Generator_UserColumnName="TaiKhoan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DonGia" msprop:Generator_ColumnVarNameInTable="columnDonGia" msprop:Generator_ColumnPropNameInRow="DonGia" msprop:Generator_ColumnPropNameInTable="DonGiaColumn" msprop:Generator_UserColumnName="DonGia" type="xs:double" />
+              <xs:element name="VAT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVAT" msprop:Generator_ColumnPropNameInRow="VAT" msprop:Generator_ColumnPropNameInTable="VATColumn" msprop:Generator_UserColumnName="VAT" type="xs:double" minOccurs="0" />
+              <xs:element name="ThanhTien" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnThanhTien" msprop:Generator_ColumnPropNameInRow="ThanhTien" msprop:Generator_ColumnPropNameInTable="ThanhTienColumn" msprop:Generator_UserColumnName="ThanhTien" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ViewTongHopTonKho" msprop:Generator_TableClassName="ViewTongHopTonKhoDataTable" msprop:Generator_TableVarName="tableViewTongHopTonKho" msprop:Generator_RowChangedName="ViewTongHopTonKhoRowChanged" msprop:Generator_TablePropName="ViewTongHopTonKho" msprop:Generator_RowDeletingName="ViewTongHopTonKhoRowDeleting" msprop:Generator_RowChangingName="ViewTongHopTonKhoRowChanging" msprop:Generator_RowEvHandlerName="ViewTongHopTonKhoRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewTongHopTonKhoRowDeleted" msprop:Generator_RowClassName="ViewTongHopTonKhoRow" msprop:Generator_UserTableName="ViewTongHopTonKho" msprop:Generator_RowEvArgName="ViewTongHopTonKhoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:long" />
+              <xs:element name="TenNCC" msprop:Generator_ColumnVarNameInTable="columnTenNCC" msprop:Generator_ColumnPropNameInRow="TenNCC" msprop:Generator_ColumnPropNameInTable="TenNCCColumn" msprop:Generator_UserColumnName="TenNCC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDLoaiSP" msprop:Generator_ColumnVarNameInTable="columnIDLoaiSP" msprop:Generator_ColumnPropNameInRow="IDLoaiSP" msprop:Generator_ColumnPropNameInTable="IDLoaiSPColumn" msprop:Generator_UserColumnName="IDLoaiSP" type="xs:long" />
+              <xs:element name="MaSP" msprop:Generator_ColumnVarNameInTable="columnMaSP" msprop:Generator_ColumnPropNameInRow="MaSP" msprop:Generator_ColumnPropNameInTable="MaSPColumn" msprop:Generator_UserColumnName="MaSP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenSP" msprop:Generator_ColumnVarNameInTable="columnTenSP" msprop:Generator_ColumnPropNameInRow="TenSP" msprop:Generator_ColumnPropNameInTable="TenSPColumn" msprop:Generator_UserColumnName="TenSP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SoLuong" msprop:Generator_ColumnVarNameInTable="columnSoLuong" msprop:Generator_ColumnPropNameInRow="SoLuong" msprop:Generator_ColumnPropNameInTable="SoLuongColumn" msprop:Generator_UserColumnName="SoLuong" type="xs:double" />
+              <xs:element name="GiaNhap" msprop:Generator_ColumnVarNameInTable="columnGiaNhap" msprop:Generator_ColumnPropNameInRow="GiaNhap" msprop:Generator_ColumnPropNameInTable="GiaNhapColumn" msprop:Generator_UserColumnName="GiaNhap" type="xs:double" />
+              <xs:element name="GiaBan" msprop:Generator_ColumnVarNameInTable="columnGiaBan" msprop:Generator_ColumnPropNameInRow="GiaBan" msprop:Generator_ColumnPropNameInTable="GiaBanColumn" msprop:Generator_UserColumnName="GiaBan" type="xs:double" />
+              <xs:element name="DonViTinh" msprop:Generator_ColumnVarNameInTable="columnDonViTinh" msprop:Generator_ColumnPropNameInRow="DonViTinh" msprop:Generator_ColumnPropNameInTable="DonViTinhColumn" msprop:Generator_UserColumnName="DonViTinh">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1277,6 +1407,14 @@ SELECT ID, TaiKhoan, MatKhau, NgayTao, AdminYN FROM TaiKhoan WHERE (ID = @ID)</C
     </xs:unique>
     <xs:unique name="ViewChiTietHDX_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ViewChiTietHDX" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="ViewTongHopHDX_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewTongHopHDX" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="ViewTongHopTonKho_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewTongHopTonKho" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>
