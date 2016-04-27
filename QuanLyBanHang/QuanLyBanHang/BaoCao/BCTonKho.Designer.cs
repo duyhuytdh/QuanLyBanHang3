@@ -130,7 +130,7 @@
             // xrLabel4
             // 
             this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewTongHopTonKho.GiaNhap")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewTongHopTonKho.GiaNhap", "{0:###,###}")});
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(398.6249F, 0F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -140,7 +140,7 @@
             // xrLabel5
             // 
             this.xrLabel5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewTongHopTonKho.GiaBan")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewTongHopTonKho.GiaBan", "{0:###,###}")});
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(498.6249F, 0F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);

@@ -77,7 +77,6 @@ namespace QuanLyBanHang.NghiepVu
                 string MaHDN = this.quanLyBanHangDataSet.HoaDonNhap.Rows[index]["MaHDN"].ToString();
                 frmHDNDetail.getDataFromParent(IDHDN,MaHDN);
                 frmHDNDetail.ShowDialog();
-                this.Close();
             }
             catch (Exception v_e)
             {

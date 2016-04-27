@@ -35,8 +35,8 @@ namespace QuanLyBanHang.NghiepVu
         private void loadDatatoGrid()
         {
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.ChiTietHDX' table. You can move, or remove it, as needed.
-            grvHDXDetail.DataSource = db.ChiTietHDXes.Where(x => x.IDHDX == mIDHDX).ToList();
-            grvHDXDetail.Refresh();
+            //grvHDXDetail.DataSource = db.ChiTietHDXes.Where(x => x.IDHDX == mIDHDX).ToList();
+            //grvHDXDetail.Refresh();
         }
 
         private void frmChiTietHDX_Load(object sender, EventArgs e)

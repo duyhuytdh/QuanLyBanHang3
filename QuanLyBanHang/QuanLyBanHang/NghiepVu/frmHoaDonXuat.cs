@@ -51,8 +51,7 @@ namespace QuanLyBanHang.NghiepVu
                 long IDHDX = (long)this.quanLyBanHangDataSet.HoaDonXuat.Rows[index]["ID"];
                 string MaHDX = this.quanLyBanHangDataSet.HoaDonXuat.Rows[index]["MaHDX"].ToString();
                 frm.getDataFromParent(IDHDX, MaHDX);
-                frm.ShowDialog();
-                this.Close();              
+                frm.ShowDialog();           
             }
             catch (Exception v_e)
             {
