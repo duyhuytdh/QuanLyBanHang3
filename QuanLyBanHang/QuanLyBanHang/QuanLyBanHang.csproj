@@ -319,6 +319,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -353,6 +354,46 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="image\icon1.jpg" />
+    <None Include="image\icon3.png" />
+    <None Include="image\icon5.png" />
+    <None Include="image\icon6.jpg" />
+    <None Include="image\icon7.png" />
+    <None Include="image\icon8.png" />
+    <None Include="image\icon9.png" />
+    <None Include="image\icon10.png" />
+    <None Include="image\icon11.png" />
+    <None Include="image\icon12.png" />
+    <None Include="image\icon13.png" />
+    <None Include="image\icon14.png" />
+    <None Include="image\icon15.png" />
+    <None Include="image\icon16.png" />
+    <None Include="image\icon17.png" />
+    <None Include="image\icon18.png" />
+    <None Include="image\icon19.png" />
+    <None Include="image\icon20.png" />
+    <None Include="image\icon21.jpg" />
+    <None Include="image\icon24.png" />
+    <None Include="image\icon25.png" />
+    <None Include="image\icon26.png" />
+    <None Include="image\logo công ty.png" />
+    <None Include="image\icon32.png" />
+    <None Include="image\icon32.jpg" />
+    <None Include="image\icon31.jpg" />
+    <None Include="image\icon30.png" />
+    <None Include="image\icon29.png" />
+    <None Include="image\icon28.jpg" />
+    <None Include="image\icon27.png" />
+    <None Include="image\ảnh nền.jpg" />
+    <None Include="image\nền.jpg" />
+    <None Include="image\nền2.jpg" />
+    <None Include="image\nền3.jpg" />
+    <None Include="image\nền4.jpg" />
+    <None Include="image\nền5.jpg" />
+    <None Include="image\nền forrm.jpg" />
+    <None Include="image\Mau-Tim.jpg" />
+    <None Include="image\màu xám.jpg" />
+    <None Include="image\xanh nhạt.png" />
     <Content Include="Model\QuanLyBanHang.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanLyBanHang.edmx</DependentUpon>

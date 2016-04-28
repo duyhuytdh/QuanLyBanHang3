@@ -41,67 +41,83 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 123);
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(94, 123);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(87, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mật khẩu mới";
             // 
             // txtPassOld
             // 
+            this.txtPassOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassOld.Location = new System.Drawing.Point(246, 83);
             this.txtPassOld.Name = "txtPassOld";
             this.txtPassOld.PasswordChar = '*';
-            this.txtPassOld.Size = new System.Drawing.Size(195, 20);
+            this.txtPassOld.Size = new System.Drawing.Size(195, 22);
             this.txtPassOld.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 83);
+            this.label2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(94, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu cũ";
             // 
             // txtPassNewRepeat
             // 
+            this.txtPassNewRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassNewRepeat.Location = new System.Drawing.Point(246, 162);
             this.txtPassNewRepeat.Name = "txtPassNewRepeat";
             this.txtPassNewRepeat.PasswordChar = '*';
-            this.txtPassNewRepeat.Size = new System.Drawing.Size(195, 20);
+            this.txtPassNewRepeat.Size = new System.Drawing.Size(195, 22);
             this.txtPassNewRepeat.TabIndex = 1;
             // 
             // txtPassNew
             // 
+            this.txtPassNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassNew.Location = new System.Drawing.Point(246, 123);
             this.txtPassNew.Name = "txtPassNew";
             this.txtPassNew.PasswordChar = '*';
-            this.txtPassNew.Size = new System.Drawing.Size(195, 20);
+            this.txtPassNew.Size = new System.Drawing.Size(195, 22);
             this.txtPassNew.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(178, 9);
+            this.label3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(149, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(225, 29);
+            this.label3.Size = new System.Drawing.Size(253, 31);
             this.label3.TabIndex = 0;
             this.label3.Text = "Thay đổi mật khẩu";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(118, 169);
+            this.label4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(94, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 13);
+            this.label4.Size = new System.Drawing.Size(140, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nhập lại mật khẩu mới";
             // 
             // btnDoiMK
             // 
-            this.btnDoiMK.Location = new System.Drawing.Point(246, 207);
+            this.btnDoiMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMK.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDoiMK.Location = new System.Drawing.Point(275, 205);
             this.btnDoiMK.Name = "btnDoiMK";
             this.btnDoiMK.Size = new System.Drawing.Size(127, 23);
             this.btnDoiMK.TabIndex = 2;
@@ -113,6 +129,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackgroundImage = global::QuanLyBanHang.Properties.Resources.màu_xám;
             this.ClientSize = new System.Drawing.Size(579, 298);
             this.Controls.Add(this.btnDoiMK);
             this.Controls.Add(this.txtPassNewRepeat);
@@ -122,6 +140,7 @@
             this.Controls.Add(this.txtPassOld);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "frmDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmDoiMatKhau";

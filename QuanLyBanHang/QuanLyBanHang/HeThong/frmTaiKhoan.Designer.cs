@@ -58,7 +58,7 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.taiKhoanBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(103, 212);
+            this.gridControl1.Location = new System.Drawing.Point(64, 177);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(680, 205);
@@ -99,6 +99,7 @@
             // 
             // colTaiKhoan
             // 
+            this.colTaiKhoan.Caption = "Tài khoản";
             this.colTaiKhoan.FieldName = "TaiKhoan";
             this.colTaiKhoan.Name = "colTaiKhoan";
             this.colTaiKhoan.Visible = true;
@@ -106,6 +107,7 @@
             // 
             // colMatKhau
             // 
+            this.colMatKhau.Caption = "Mật khẩu";
             this.colMatKhau.FieldName = "MatKhau";
             this.colMatKhau.Name = "colMatKhau";
             this.colMatKhau.Visible = true;
@@ -113,6 +115,7 @@
             // 
             // colNgayTao
             // 
+            this.colNgayTao.Caption = "Ngày tạo";
             this.colNgayTao.FieldName = "NgayTao";
             this.colNgayTao.Name = "colNgayTao";
             this.colNgayTao.Visible = true;
@@ -128,18 +131,23 @@
             // checkBoxAdmin
             // 
             this.checkBoxAdmin.AutoSize = true;
-            this.checkBoxAdmin.Location = new System.Drawing.Point(560, 92);
+            this.checkBoxAdmin.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.checkBoxAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxAdmin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkBoxAdmin.Location = new System.Drawing.Point(559, 89);
             this.checkBoxAdmin.Name = "checkBoxAdmin";
-            this.checkBoxAdmin.Size = new System.Drawing.Size(65, 17);
+            this.checkBoxAdmin.Size = new System.Drawing.Size(78, 20);
             this.checkBoxAdmin.TabIndex = 1;
             this.checkBoxAdmin.Text = "is Admin";
-            this.checkBoxAdmin.UseVisualStyleBackColor = true;
+            this.checkBoxAdmin.UseVisualStyleBackColor = false;
             // 
             // btnThemTK
             // 
-            this.btnThemTK.Location = new System.Drawing.Point(374, 142);
+            this.btnThemTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemTK.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnThemTK.Location = new System.Drawing.Point(359, 138);
             this.btnThemTK.Name = "btnThemTK";
-            this.btnThemTK.Size = new System.Drawing.Size(109, 23);
+            this.btnThemTK.Size = new System.Drawing.Size(121, 23);
             this.btnThemTK.TabIndex = 2;
             this.btnThemTK.Text = "Thêm Tài Khoản";
             this.btnThemTK.UseVisualStyleBackColor = true;
@@ -147,33 +155,41 @@
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(346, 60);
+            this.txtTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaiKhoan.Location = new System.Drawing.Point(329, 38);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(184, 20);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(184, 22);
             this.txtTaiKhoan.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(245, 67);
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(188, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.Size = new System.Drawing.Size(107, 16);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Têm Tài Khoản";
+            this.label1.Text = "Thêm Tài Khoản";
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(346, 89);
+            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(329, 86);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(184, 20);
+            this.txtMatKhau.Size = new System.Drawing.Size(184, 22);
             this.txtMatKhau.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(245, 92);
+            this.label2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(188, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Mật khẩu";
             // 
@@ -185,6 +201,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackgroundImage = global::QuanLyBanHang.Properties.Resources.màu_xám;
             this.ClientSize = new System.Drawing.Size(838, 438);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -193,6 +211,7 @@
             this.Controls.Add(this.btnThemTK);
             this.Controls.Add(this.checkBoxAdmin);
             this.Controls.Add(this.gridControl1);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "frmTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTaiKhoan";
