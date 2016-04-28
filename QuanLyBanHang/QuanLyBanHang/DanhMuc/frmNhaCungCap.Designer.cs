@@ -57,6 +57,8 @@
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFax = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.loaiSanPhamBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaCungCapBindingSource)).BeginInit();
@@ -226,6 +228,7 @@
             this.colFax});
             this.grvNCC.GridControl = this.gridCtrNCC;
             this.grvNCC.Name = "grvNCC";
+            this.grvNCC.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.grvNCC_RowClick);
             // 
             // colID
             // 
@@ -276,11 +279,33 @@
             this.colFax.Visible = true;
             this.colFax.VisibleIndex = 6;
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(290, 124);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 19;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Location = new System.Drawing.Point(190, 124);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
+            this.btnCapNhat.TabIndex = 20;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
             // frmNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 464);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.gridCtrNCC);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label6);
@@ -340,5 +365,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colEmail;
         private DevExpress.XtraGrid.Columns.GridColumn colDiaChi;
         private DevExpress.XtraGrid.Columns.GridColumn colFax;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnCapNhat;
     }
 }

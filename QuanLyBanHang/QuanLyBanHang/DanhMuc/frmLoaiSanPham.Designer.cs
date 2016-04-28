@@ -39,20 +39,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.gridCtrLoaiSP = new DevExpress.XtraGrid.GridControl();
-            this.grvLoaiSP = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.quanLyBanHangDataSet = new QuanLyBanHang.DataSet.QuanLyBanHangDataSet();
             this.loaiSanPhamBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loaiSanPhamTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.LoaiSanPhamTableAdapter();
+            this.quanLyBanHangDataSet = new QuanLyBanHang.DataSet.QuanLyBanHangDataSet();
+            this.grvLoaiSP = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenLoaiSP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaLoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMoTa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.loaiSanPhamTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.LoaiSanPhamTableAdapter();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridCtrLoaiSP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvLoaiSP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiSanPhamBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvLoaiSP)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -117,7 +119,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 100);
+            this.label5.Location = new System.Drawing.Point(341, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 0;
@@ -142,6 +144,16 @@
             this.gridCtrLoaiSP.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvLoaiSP});
             // 
+            // loaiSanPhamBindingSource
+            // 
+            this.loaiSanPhamBindingSource.DataMember = "LoaiSanPham";
+            this.loaiSanPhamBindingSource.DataSource = this.quanLyBanHangDataSet;
+            // 
+            // quanLyBanHangDataSet
+            // 
+            this.quanLyBanHangDataSet.DataSetName = "QuanLyBanHangDataSet";
+            this.quanLyBanHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // grvLoaiSP
             // 
             this.grvLoaiSP.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -152,20 +164,7 @@
             this.colGhiChu});
             this.grvLoaiSP.GridControl = this.gridCtrLoaiSP;
             this.grvLoaiSP.Name = "grvLoaiSP";
-            // 
-            // quanLyBanHangDataSet
-            // 
-            this.quanLyBanHangDataSet.DataSetName = "QuanLyBanHangDataSet";
-            this.quanLyBanHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // loaiSanPhamBindingSource
-            // 
-            this.loaiSanPhamBindingSource.DataMember = "LoaiSanPham";
-            this.loaiSanPhamBindingSource.DataSource = this.quanLyBanHangDataSet;
-            // 
-            // loaiSanPhamTableAdapter
-            // 
-            this.loaiSanPhamTableAdapter.ClearBeforeFill = true;
+            this.grvLoaiSP.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.grvLoaiSP_RowClick);
             // 
             // colID
             // 
@@ -200,9 +199,13 @@
             this.colGhiChu.Visible = true;
             this.colGhiChu.VisibleIndex = 3;
             // 
+            // loaiSanPhamTableAdapter
+            // 
+            this.loaiSanPhamTableAdapter.ClearBeforeFill = true;
+            // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(120, 125);
+            this.btnThem.Location = new System.Drawing.Point(120, 143);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 6;
@@ -210,11 +213,33 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Location = new System.Drawing.Point(231, 143);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
+            this.btnCapNhat.TabIndex = 6;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(340, 143);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 6;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // frmLoaiSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 418);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.gridCtrLoaiSP);
             this.Controls.Add(this.label4);
@@ -231,9 +256,9 @@
             this.Text = "frmLoaiSanPham";
             this.Load += new System.EventHandler(this.frmLoaiSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridCtrLoaiSP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvLoaiSP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiSanPhamBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvLoaiSP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +286,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMoTa;
         private DevExpress.XtraGrid.Columns.GridColumn colGhiChu;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.Button btnXoa;
     }
 }

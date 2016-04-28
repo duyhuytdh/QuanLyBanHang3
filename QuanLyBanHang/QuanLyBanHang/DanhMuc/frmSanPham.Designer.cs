@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenSP = new System.Windows.Forms.TextBox();
@@ -59,6 +59,8 @@
             this.nhaCungCapTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.NhaCungCapTableAdapter();
             this.cboLoaiSP = new DevExpress.XtraEditors.LookUpEdit();
             this.fKSanPhamLoaiSanPham1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.loaiSanPhamBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPhamBindingSource)).BeginInit();
@@ -117,7 +119,6 @@
             // 
             // txtMaSP
             // 
-            this.txtMaSP.Enabled = false;
             this.txtMaSP.Location = new System.Drawing.Point(195, 65);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.Size = new System.Drawing.Size(204, 20);
@@ -166,9 +167,9 @@
             // gridCtrDMSP
             // 
             this.gridCtrDMSP.DataSource = this.viewSanPhamBindingSource;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridCtrDMSP.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gridCtrDMSP.Location = new System.Drawing.Point(49, 208);
             this.gridCtrDMSP.MainView = this.grvSP;
             this.gridCtrDMSP.Name = "gridCtrDMSP";
@@ -192,6 +193,7 @@
             this.colDonViTinh});
             this.grvSP.GridControl = this.gridCtrDMSP;
             this.grvSP.Name = "grvSP";
+            this.grvSP.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.grvSP_RowClick);
             // 
             // colMaLoai
             // 
@@ -305,11 +307,33 @@
             this.fKSanPhamLoaiSanPham1BindingSource.DataMember = "FK_SanPham_LoaiSanPham1";
             this.fKSanPhamLoaiSanPham1BindingSource.DataSource = this.loaiSanPhamBindingSource;
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(391, 162);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 21;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Location = new System.Drawing.Point(291, 162);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
+            this.btnCapNhat.TabIndex = 22;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.cboLoaiSP);
             this.Controls.Add(this.cboNCC);
             this.Controls.Add(this.gridCtrDMSP);
@@ -373,5 +397,7 @@
         private DataSet.QuanLyBanHangDataSetTableAdapters.NhaCungCapTableAdapter nhaCungCapTableAdapter;
         private DevExpress.XtraEditors.LookUpEdit cboLoaiSP;
         private System.Windows.Forms.BindingSource fKSanPhamLoaiSanPham1BindingSource;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnCapNhat;
     }
 }

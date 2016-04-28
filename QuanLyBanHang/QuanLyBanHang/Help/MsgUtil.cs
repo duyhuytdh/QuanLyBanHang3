@@ -20,5 +20,13 @@ namespace QuanLyBanHang.Help
         {
             MessageBox.Show("Bạn đã thêm mới thành công!", "Thông Báo", MessageBoxButtons.OK);
         }
+        public static void MessageCapNhatSuccess()
+        {
+            MessageBox.Show("Bạn đã cập nhật thành công!", "Thông Báo", MessageBoxButtons.OK);
+        }
+        public static void MessageXoaSuccess()
+        {
+            MessageBox.Show("Bạn đã xóa dữ liệu thành công!", "Thông Báo", MessageBoxButtons.OK);
+        }
     }
 }

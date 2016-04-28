@@ -14,6 +14,9 @@ namespace QuanLyBanHang.DanhMuc
 {
     public partial class frmNhaCungCap : Form
     {
+        private long mID;
+        private bool mIsRowSelected;
+
         public frmNhaCungCap()
         {
             InitializeComponent();
@@ -45,9 +48,17 @@ namespace QuanLyBanHang.DanhMuc
             }
             return true;
         }
-        private bool checkMaNCCExist(QuanLyBanHangEntities db)
+        private bool checkMaNCCExist(QuanLyBanHangEntities db, bool isInsert)
         {
-            NhaCungCap NCC = db.NhaCungCaps.FirstOrDefault(x => x.MaNCC == txtMaNCC.Text.Trim());
+            NhaCungCap NCC;
+            if (isInsert)
+            {
+                NCC = db.NhaCungCaps.FirstOrDefault(x => x.MaNCC == txtMaNCC.Text.Trim());
+            }
+            else
+            {
+                NCC = db.NhaCungCaps.FirstOrDefault(x => x.MaNCC == txtMaNCC.Text.Trim() && x.ID != mID);
+            }
             if (NCC == null)
             {
                 return true;
@@ -66,7 +77,7 @@ namespace QuanLyBanHang.DanhMuc
                 {
                     QuanLyBanHangEntities db = new QuanLyBanHangEntities();
                     NhaCungCap vNCC = new NhaCungCap();
-                    if (checkMaNCCExist(db))
+                    if (checkMaNCCExist(db,true))
                     {
                         vNCC.MaNCC = txtMaNCC.Text.Trim();
                     }
@@ -105,6 +116,96 @@ namespace QuanLyBanHang.DanhMuc
                 MessageBox.Show("Lỗi :" + v_e);
             }
 
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (mIsRowSelected)
+                {
+                    QuanLyBanHangEntities db = new QuanLyBanHangEntities();
+                    NhaCungCap vNCC = db.NhaCungCaps.FirstOrDefault(x => x.ID == mID);
+                    if (checkMaNCCExist(db,false))
+                    {
+                        vNCC.MaNCC = txtMaNCC.Text.Trim();
+                    }
+                    else
+                    {
+                        MsgUtil.MessageThongBao("Mã nhà cung cấp đã tồn tại");
+                        txtMaNCC.Focus();
+                        return;
+                    }
+                    vNCC.TenNCC = txtTenNCC.Text.Trim();
+                    if (txtEmail.Text.Length > 0)
+                    {
+                        vNCC.Email = txtEmail.Text.Trim();
+                    }
+                    if (txtDienThoai.Text.Length > 0)
+                    {
+                        vNCC.DienThoai = txtDienThoai.Text.Trim();
+                    }
+                    if (txtDiaChi.Text.Length > 0)
+                    {
+                        vNCC.DiaChi = txtDiaChi.Text.Trim();
+                    }
+                    if (txtFax.Text.Length > 0)
+                    {
+                        vNCC.Fax = txtFax.Text.Trim();
+                    }
+                    db.SaveChanges();
+                    loadDatatoGridView();
+                    MsgUtil.MessageCapNhatSuccess();
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                MessageBox.Show("Lỗi :" + v_e);
+            }
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (mIsRowSelected)
+                {
+
+                    QuanLyBanHangEntities db = new QuanLyBanHangEntities();
+                    NhaCungCap v_NCC = db.NhaCungCaps.FirstOrDefault(x => x.ID == mID);
+                    db.NhaCungCaps.Remove(v_NCC);
+                    db.SaveChanges();
+                    loadDatatoGridView();
+                    MsgUtil.MessageXoaSuccess();
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                MessageBox.Show("Lỗi :" + v_e);
+            }
+        }
+
+        private void grvNCC_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            try
+            {
+                mIsRowSelected = true;
+                DataRow row = grvNCC.GetDataRow(grvNCC.GetSelectedRows()[0]);
+                txtMaNCC.Text = row["MaNCC"].ToString();
+                txtTenNCC.Text = row["TenNCC"].ToString();
+                txtDienThoai.Text = row["TenNCC"].ToString();
+                txtEmail.Text = row["DiaChi"].ToString();
+                txtFax.Text = row["Fax"].ToString();
+                mID = Convert.ToInt32(row["ID"].ToString());
+            }
+            catch (Exception v_e)
+            {
+                
+                MessageBox.Show("Lỗi :" + v_e);
+            }
         }
     }
 }
