@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDonXuat));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.hoaDonNhapTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.HoaDonNhapTableAdapter();
             this.btnChiTietHDX = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.grvHDX = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaHDX = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,20 +42,21 @@
             this.colDienThoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colChitietHDX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridCtrHDX = new DevExpress.XtraGrid.GridControl();
-            this.hoaDonXuatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hoaDonXuatBindingSource1 = new System.Windows.Forms.BindingSource();
             this.quanLyBanHangDataSet = new QuanLyBanHang.DataSet.QuanLyBanHangDataSet();
-            this.hoaDonNhapBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hoaDonNhapBindingSource = new System.Windows.Forms.BindingSource();
             this.label7 = new System.Windows.Forms.Label();
             this.dtNgayXuat = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaHDX = new System.Windows.Forms.TextBox();
             this.lbl = new System.Windows.Forms.Label();
-            this.hoaDonXuatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hoaDonXuatBindingSource = new System.Windows.Forms.BindingSource();
             this.hoaDonXuatTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.HoaDonXuatTableAdapter();
             this.txtKhachHang = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDienThoai = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnChiTietHDX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvHDX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCtrHDX)).BeginInit();
@@ -79,16 +79,16 @@
             this.btnChiTietHDX.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnChiTietHDX.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnChiTietHDX_ButtonClick);
             // 
-            // btnThem
+            // btnRefresh
             // 
-            this.btnThem.Location = new System.Drawing.Point(210, 130);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 28);
-            this.btnThem.TabIndex = 17;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnRefresh.Location = new System.Drawing.Point(24, 146);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(100, 28);
+            this.btnRefresh.TabIndex = 17;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // grvHDX
             // 
@@ -297,13 +297,25 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Điện thoại";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(165, 130);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Thêm";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // frmHoaDonXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyBanHang.Properties.Resources.màu_xám;
             this.ClientSize = new System.Drawing.Size(925, 513);
-            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.gridCtrHDX);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dtNgayXuat);
@@ -336,7 +348,7 @@
 
         private DataSet.QuanLyBanHangDataSetTableAdapters.HoaDonNhapTableAdapter hoaDonNhapTableAdapter;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnChiTietHDX;
-        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnRefresh;
         private DevExpress.XtraGrid.Views.Grid.GridView grvHDX;
         private DevExpress.XtraGrid.GridControl gridCtrHDX;
         private System.Windows.Forms.BindingSource hoaDonNhapBindingSource;
@@ -360,5 +372,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDienThoai;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

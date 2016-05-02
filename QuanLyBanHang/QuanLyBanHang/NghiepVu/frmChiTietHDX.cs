@@ -69,7 +69,7 @@ namespace QuanLyBanHang.NghiepVu
 
             //save data to HDN
             HoaDonXuat hd = db.HoaDonXuats.FirstOrDefault(x => x.ID == ctHDX.IDHDX);
-            hd.TongTien = hd.TongTien + sp.GiaNhap;
+            hd.TongTien = hd.TongTien + sp.GiaBan * ctHDX.SoLuong;
 
             db.ChiTietHDXes.Add(ctHDX);
             db.SaveChanges();

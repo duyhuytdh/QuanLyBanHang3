@@ -42,7 +42,6 @@
             this.menuItemNhapHang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemXuatHang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBaoCao = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItem_BCDoanhThu = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemBaoCaoNhapHang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemBCXuatHang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemBCTonKho = new System.Windows.Forms.ToolStripMenuItem();
@@ -175,7 +174,6 @@
             // menuBaoCao
             // 
             this.menuBaoCao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItem_BCDoanhThu,
             this.ItemBaoCaoNhapHang,
             this.menuItemBCXuatHang,
             this.menuItemBCTonKho});
@@ -183,14 +181,6 @@
             this.menuBaoCao.Name = "menuBaoCao";
             this.menuBaoCao.Size = new System.Drawing.Size(92, 25);
             this.menuBaoCao.Text = "Báo cáo";
-            // 
-            // menuItem_BCDoanhThu
-            // 
-            this.menuItem_BCDoanhThu.Image = global::QuanLyBanHang.Properties.Resources.icon29;
-            this.menuItem_BCDoanhThu.Name = "menuItem_BCDoanhThu";
-            this.menuItem_BCDoanhThu.Size = new System.Drawing.Size(212, 26);
-            this.menuItem_BCDoanhThu.Text = "Báo cáo doanh thu";
-            this.menuItem_BCDoanhThu.Click += new System.EventHandler(this.menuItem_BCDoanhThu_Click);
             // 
             // ItemBaoCaoNhapHang
             // 
@@ -280,7 +270,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuItemDatHang;
         private System.Windows.Forms.ToolStripMenuItem menuItemNhapHang;
         private System.Windows.Forms.ToolStripMenuItem menuItemXuatHang;
-        private System.Windows.Forms.ToolStripMenuItem menuItem_BCDoanhThu;
         private System.Windows.Forms.ToolStripMenuItem ItemBaoCaoNhapHang;
         private System.Windows.Forms.ToolStripMenuItem menuItemBCXuatHang;
         private System.Windows.Forms.ToolStripMenuItem menuItemBCTonKho;

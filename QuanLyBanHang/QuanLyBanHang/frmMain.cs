@@ -100,12 +100,12 @@ namespace QuanLyBanHang
 
         #region Bao Cao
 
-        private void menuItem_BCDoanhThu_Click(object sender, EventArgs e)
-        {
-            BCDoanhThu bc = new BCDoanhThu();
-            ReportPrintTool tool = new ReportPrintTool(bc);
-            tool.ShowPreviewDialog();
-        }
+        //private void menuItem_BCDoanhThu_Click(object sender, EventArgs e)
+        //{
+        //    BCDoanhThu bc = new BCDoanhThu();
+        //    ReportPrintTool tool = new ReportPrintTool(bc);
+        //    tool.ShowPreviewDialog();
+        //}
 
         private void ItemBaoCaoNhapHang_Click(object sender, EventArgs e)
         {

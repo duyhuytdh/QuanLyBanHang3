@@ -92,5 +92,10 @@ namespace QuanLyBanHang.NghiepVu
                 MsgUtil.MessageThongBao("Lỗi " + v_e);
             }
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            loadDatatoGrid();
+        }
     }
 }

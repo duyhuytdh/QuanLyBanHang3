@@ -79,12 +79,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCao\BCDoanhThu.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="BaoCao\BCDoanhThu.Designer.cs">
-      <DependentUpon>BCDoanhThu.cs</DependentUpon>
-    </Compile>
     <Compile Include="BaoCao\BCNhapHang.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -263,9 +257,6 @@
     <Compile Include="Model\TaiKhoan.cs">
       <DependentUpon>QuanLyBanHang.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaoCao\BCDoanhThu.resx">
-      <DependentUpon>BCDoanhThu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\BCNhapHang.resx">
       <DependentUpon>BCNhapHang.cs</DependentUpon>
     </EmbeddedResource>
