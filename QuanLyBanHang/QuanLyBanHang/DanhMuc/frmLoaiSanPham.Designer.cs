@@ -60,9 +60,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(59, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Loại";
             // 
@@ -76,9 +79,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(337, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên Loại";
             // 
@@ -92,10 +98,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(226, 0);
+            this.label3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(225, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 29);
+            this.label3.Size = new System.Drawing.Size(197, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "Loại Sản Phẩm";
             // 
@@ -110,18 +118,24 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(59, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Mô Tả";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(341, 88);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(54, 16);
             this.label5.TabIndex = 0;
             this.label5.Text = "Ghi Chú";
             // 
@@ -173,6 +187,7 @@
             // 
             // colTenLoaiSP
             // 
+            this.colTenLoaiSP.Caption = "Tên loại SP";
             this.colTenLoaiSP.FieldName = "TenLoaiSP";
             this.colTenLoaiSP.Name = "colTenLoaiSP";
             this.colTenLoaiSP.Visible = true;
@@ -180,6 +195,7 @@
             // 
             // colMaLoai
             // 
+            this.colMaLoai.Caption = "Mã loại";
             this.colMaLoai.FieldName = "MaLoai";
             this.colMaLoai.Name = "colMaLoai";
             this.colMaLoai.Visible = true;
@@ -187,6 +203,7 @@
             // 
             // colMoTa
             // 
+            this.colMoTa.Caption = "Mô tả";
             this.colMoTa.FieldName = "MoTa";
             this.colMoTa.Name = "colMoTa";
             this.colMoTa.Visible = true;
@@ -194,6 +211,7 @@
             // 
             // colGhiChu
             // 
+            this.colGhiChu.Caption = "Ghi chú";
             this.colGhiChu.FieldName = "GhiChu";
             this.colGhiChu.Name = "colGhiChu";
             this.colGhiChu.Visible = true;
@@ -205,7 +223,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(120, 143);
+            this.btnThem.Location = new System.Drawing.Point(168, 130);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 6;
@@ -215,7 +233,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(231, 143);
+            this.btnCapNhat.Location = new System.Drawing.Point(279, 130);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
             this.btnCapNhat.TabIndex = 6;
@@ -225,7 +243,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(340, 143);
+            this.btnXoa.Location = new System.Drawing.Point(388, 130);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 6;
@@ -237,6 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyBanHang.Properties.Resources.màu_xám;
             this.ClientSize = new System.Drawing.Size(694, 418);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);

@@ -69,7 +69,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(162, 135);
+            this.btnThem.Location = new System.Drawing.Point(166, 137);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 17;
@@ -133,7 +133,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(379, 74);
+            this.label5.Location = new System.Drawing.Point(379, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 16);
             this.label5.TabIndex = 7;
@@ -178,7 +178,7 @@
             // txtDienThoai
             // 
             this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDienThoai.Location = new System.Drawing.Point(452, 71);
+            this.txtDienThoai.Location = new System.Drawing.Point(452, 75);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(179, 22);
             this.txtDienThoai.TabIndex = 11;
@@ -186,7 +186,7 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(130, 97);
+            this.txtDiaChi.Location = new System.Drawing.Point(130, 98);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(152, 22);
             this.txtDiaChi.TabIndex = 12;
@@ -209,7 +209,7 @@
             this.label7.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(379, 97);
+            this.label7.Location = new System.Drawing.Point(379, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 16);
             this.label7.TabIndex = 7;
@@ -218,7 +218,7 @@
             // txtFax
             // 
             this.txtFax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFax.Location = new System.Drawing.Point(452, 94);
+            this.txtFax.Location = new System.Drawing.Point(452, 101);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(179, 22);
             this.txtFax.TabIndex = 11;
@@ -235,7 +235,7 @@
             // gridCtrNCC
             // 
             this.gridCtrNCC.DataSource = this.nhaCungCapBindingSource;
-            this.gridCtrNCC.Location = new System.Drawing.Point(23, 169);
+            this.gridCtrNCC.Location = new System.Drawing.Point(39, 180);
             this.gridCtrNCC.MainView = this.grvNCC;
             this.gridCtrNCC.Name = "gridCtrNCC";
             this.gridCtrNCC.Size = new System.Drawing.Size(655, 241);
@@ -310,7 +310,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(290, 124);
+            this.btnXoa.Location = new System.Drawing.Point(416, 137);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 19;
@@ -320,7 +320,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(190, 124);
+            this.btnCapNhat.Location = new System.Drawing.Point(284, 137);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
             this.btnCapNhat.TabIndex = 20;

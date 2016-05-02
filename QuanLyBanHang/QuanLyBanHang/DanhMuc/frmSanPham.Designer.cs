@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenSP = new System.Windows.Forms.TextBox();
@@ -148,7 +148,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(202, 155);
+            this.btnThem.Location = new System.Drawing.Point(202, 162);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 5;
@@ -182,10 +182,10 @@
             // gridCtrDMSP
             // 
             this.gridCtrDMSP.DataSource = this.viewSanPhamBindingSource;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridCtrDMSP.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
-            this.gridCtrDMSP.Location = new System.Drawing.Point(39, 184);
+            gridLevelNode1});
+            this.gridCtrDMSP.Location = new System.Drawing.Point(38, 206);
             this.gridCtrDMSP.MainView = this.grvSP;
             this.gridCtrDMSP.Name = "gridCtrDMSP";
             this.gridCtrDMSP.Size = new System.Drawing.Size(777, 317);
