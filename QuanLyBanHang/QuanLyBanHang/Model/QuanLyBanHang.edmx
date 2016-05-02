@@ -655,7 +655,7 @@
           <Property Type="DateTime" Name="NgayDat" Nullable="false" Precision="3" />
           <Property Type="DateTime" Name="NgayNhan" Nullable="false" Precision="3" />
           <Property Type="String" Name="TenKhachHang" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="DienThoai" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DienThoai" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="GhiChu" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SanPham" Relationship="QuanLyBanHangModel.FK_DatHang_SanPham" FromRole="DatHang" ToRole="SanPham" />
         </EntityType>
@@ -703,10 +703,10 @@
           <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="MaNCC" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="TenNCC" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="DienThoai" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DienThoai" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="DiaChi" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Fax" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SanPhams" Relationship="QuanLyBanHangModel.FK_SanPham_NhaCungCap" FromRole="NhaCungCap" ToRole="SanPham" />
         </EntityType>
         <EntityType Name="SanPham">

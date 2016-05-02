@@ -123,6 +123,7 @@
     </Compile>
     <Compile Include="DataSet\QuanLyBanHangDataSet.cs">
       <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Help\MsgUtil.cs" />
     <Compile Include="Help\validate.cs" />

@@ -1803,7 +1803,7 @@ namespace QuanLyBanHang.DataSet {
                 this.columnNgayDat.AllowDBNull = false;
                 this.columnNgayNhan.AllowDBNull = false;
                 this.columnTenKhachHang.MaxLength = 50;
-                this.columnDienThoai.MaxLength = 11;
+                this.columnDienThoai.MaxLength = 20;
                 this.columnGhiChu.MaxLength = 50;
             }
             
@@ -3161,10 +3161,10 @@ namespace QuanLyBanHang.DataSet {
                 this.columnMaNCC.MaxLength = 10;
                 this.columnTenNCC.AllowDBNull = false;
                 this.columnTenNCC.MaxLength = 50;
-                this.columnDienThoai.MaxLength = 11;
+                this.columnDienThoai.MaxLength = 20;
                 this.columnEmail.MaxLength = 50;
                 this.columnDiaChi.MaxLength = 50;
-                this.columnFax.MaxLength = 11;
+                this.columnFax.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

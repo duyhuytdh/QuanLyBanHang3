@@ -45,5 +45,44 @@ namespace QuanLyBanHang.Model
         public DbSet<ViewTongHopHDN> ViewTongHopHDNs { get; set; }
         public DbSet<ViewTongHopHDX> ViewTongHopHDXes { get; set; }
         public DbSet<ViewTongHopTonKho> ViewTongHopTonKhoes { get; set; }
+    
+        //public virtual ObjectResult<pr_bc_doanh_thu_Result> pr_bc_doanh_thu(Nullable<System.DateTime> tu_ngay, Nullable<System.DateTime> den_ngay)
+        //{
+        //    var tu_ngayParameter = tu_ngay.HasValue ?
+        //        new ObjectParameter("tu_ngay", tu_ngay) :
+        //        new ObjectParameter("tu_ngay", typeof(System.DateTime));
+    
+        //    var den_ngayParameter = den_ngay.HasValue ?
+        //        new ObjectParameter("den_ngay", den_ngay) :
+        //        new ObjectParameter("den_ngay", typeof(System.DateTime));
+    
+        //    return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<pr_bc_doanh_thu_Result>("pr_bc_doanh_thu", tu_ngayParameter, den_ngayParameter);
+        //}
+    
+        //public virtual ObjectResult<pr_bc_nhap_hang_Result> pr_bc_nhap_hang(Nullable<System.DateTime> tu_ngay, Nullable<System.DateTime> den_ngay)
+        //{
+        //    var tu_ngayParameter = tu_ngay.HasValue ?
+        //        new ObjectParameter("tu_ngay", tu_ngay) :
+        //        new ObjectParameter("tu_ngay", typeof(System.DateTime));
+    
+        //    var den_ngayParameter = den_ngay.HasValue ?
+        //        new ObjectParameter("den_ngay", den_ngay) :
+        //        new ObjectParameter("den_ngay", typeof(System.DateTime));
+    
+        //    return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<pr_bc_nhap_hang_Result>("pr_bc_nhap_hang", tu_ngayParameter, den_ngayParameter);
+        //}
+    
+        //public virtual ObjectResult<pr_bc_xuat_hang_Result> pr_bc_xuat_hang(Nullable<System.DateTime> tu_ngay, Nullable<System.DateTime> den_ngay)
+        //{
+        //    var tu_ngayParameter = tu_ngay.HasValue ?
+        //        new ObjectParameter("tu_ngay", tu_ngay) :
+        //        new ObjectParameter("tu_ngay", typeof(System.DateTime));
+    
+        //    var den_ngayParameter = den_ngay.HasValue ?
+        //        new ObjectParameter("den_ngay", den_ngay) :
+        //        new ObjectParameter("den_ngay", typeof(System.DateTime));
+    
+        //    return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<pr_bc_xuat_hang_Result>("pr_bc_xuat_hang", tu_ngayParameter, den_ngayParameter);
+        //}
     }
 }
