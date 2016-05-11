@@ -123,7 +123,7 @@ namespace QuanLyBanHang
 
         private void menuItemBCTonKho_Click(object sender, EventArgs e)
         {
-            BCTonKho bc = new BCTonKho();
+            BCXuatNhapTon bc = new BCXuatNhapTon();
             ReportPrintTool tool = new ReportPrintTool(bc);
             tool.ShowPreviewDialog();
         }
