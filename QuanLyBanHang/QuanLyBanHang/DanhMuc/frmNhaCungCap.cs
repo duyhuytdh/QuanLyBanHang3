@@ -32,6 +32,7 @@ namespace QuanLyBanHang.DanhMuc
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.NhaCungCap' table. You can move, or remove it, as needed.
             this.nhaCungCapTableAdapter.Fill(this.quanLyBanHangDataSet.NhaCungCap);
         }
+
         private bool validate_data()
         {
             if (txtMaNCC.Text.Length < 1)
@@ -48,6 +49,7 @@ namespace QuanLyBanHang.DanhMuc
             }
             return true;
         }
+
         private bool checkMaNCCExist(QuanLyBanHangEntities db, bool isInsert)
         {
             NhaCungCap NCC;
@@ -196,8 +198,9 @@ namespace QuanLyBanHang.DanhMuc
                 DataRow row = grvNCC.GetDataRow(grvNCC.GetSelectedRows()[0]);
                 txtMaNCC.Text = row["MaNCC"].ToString();
                 txtTenNCC.Text = row["TenNCC"].ToString();
-                txtDienThoai.Text = row["TenNCC"].ToString();
-                txtEmail.Text = row["DiaChi"].ToString();
+                txtDienThoai.Text = row["DienThoai"].ToString();
+                txtDiaChi.Text = row["DiaChi"].ToString();
+                txtEmail.Text = row["Email"].ToString();
                 txtFax.Text = row["Fax"].ToString();
                 mID = Convert.ToInt32(row["ID"].ToString());
             }
