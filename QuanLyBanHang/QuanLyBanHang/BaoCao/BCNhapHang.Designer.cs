@@ -44,6 +44,12 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
+            this.den_ngay = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.tu_ngay = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.quanLyBanHangDataSet1 = new QuanLyBanHang.DataSet.QuanLyBanHangDataSet();
@@ -65,14 +71,8 @@
             this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
-            this.tu_ngay = new DevExpress.XtraReports.Parameters.Parameter();
-            this.den_ngay = new DevExpress.XtraReports.Parameters.Parameter();
             this.MaHDN = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -94,7 +94,7 @@
             // xrLabel8
             // 
             this.xrLabel8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "pr_bc_nhap_hang.ThanhTien", "{0:###,###}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "pr_bc_nhap_hang.ThanhTien", "{0:###,###.00}")});
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(700F, 5.541674F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -169,6 +169,55 @@
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // xrLabel13
+            // 
+            this.xrLabel13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.den_ngay, "Text", "{0:dd-MM-yyyy}")});
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(516.4584F, 60.00001F);
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel13.Text = "xrLabel6";
+            // 
+            // den_ngay
+            // 
+            this.den_ngay.Name = "den_ngay";
+            this.den_ngay.Type = typeof(System.DateTime);
+            this.den_ngay.ValueInfo = "2021-12-31";
+            // 
+            // xrLabel12
+            // 
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(449.7917F, 60.00001F);
+            this.xrLabel12.Multiline = true;
+            this.xrLabel12.Name = "xrLabel12";
+            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(66.66669F, 23F);
+            this.xrLabel12.Text = "Đến ngày:\r\n";
+            // 
+            // xrLabel11
+            // 
+            this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.tu_ngay, "Text", "{0:dd-MM-yyyy}")});
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(241.8751F, 60.00001F);
+            this.xrLabel11.Name = "xrLabel11";
+            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel11.Text = "xrLabel5";
+            // 
+            // tu_ngay
+            // 
+            this.tu_ngay.Name = "tu_ngay";
+            this.tu_ngay.Type = typeof(System.DateTime);
+            this.tu_ngay.ValueInfo = "1999-12-31";
+            // 
+            // xrLabel14
+            // 
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(183.5417F, 60.00001F);
+            this.xrLabel14.Name = "xrLabel14";
+            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel14.SizeF = new System.Drawing.SizeF(58.33334F, 23F);
+            this.xrLabel14.Text = "Từ ngày:";
+            // 
             // xrLabel9
             // 
             this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,7 +263,7 @@
             // xrLabel7
             // 
             this.xrLabel7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "pr_bc_nhap_hang.TongTien", "{0:###,###}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "pr_bc_nhap_hang.TongTien", "{0:###,###.00}")});
             this.xrLabel7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(200F, 0F);
             this.xrLabel7.Name = "xrLabel7";
@@ -342,22 +391,10 @@
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel10.SizeF = new System.Drawing.SizeF(100F, 23F);
             this.xrLabel10.StylePriority.UseFont = false;
-            xrSummary1.FormatString = "{0:###,###}";
+            xrSummary1.FormatString = "{0:###,###.00}";
             xrSummary1.IgnoreNullValues = true;
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel10.Summary = xrSummary1;
-            // 
-            // tu_ngay
-            // 
-            this.tu_ngay.Name = "tu_ngay";
-            this.tu_ngay.Type = typeof(System.DateTime);
-            this.tu_ngay.ValueInfo = "1999-12-31";
-            // 
-            // den_ngay
-            // 
-            this.den_ngay.Name = "den_ngay";
-            this.den_ngay.Type = typeof(System.DateTime);
-            this.den_ngay.ValueInfo = "2021-12-31";
             // 
             // MaHDN
             // 
@@ -384,43 +421,6 @@
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
-            // 
-            // xrLabel13
-            // 
-            this.xrLabel13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.den_ngay, "Text", "{0:dd-MM-yyyy}")});
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(516.4584F, 60.00001F);
-            this.xrLabel13.Name = "xrLabel13";
-            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(100F, 23F);
-            this.xrLabel13.Text = "xrLabel6";
-            // 
-            // xrLabel12
-            // 
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(449.7917F, 60.00001F);
-            this.xrLabel12.Multiline = true;
-            this.xrLabel12.Name = "xrLabel12";
-            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(66.66669F, 23F);
-            this.xrLabel12.Text = "Đến ngày:\r\n";
-            // 
-            // xrLabel11
-            // 
-            this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.tu_ngay, "Text", "{0:dd-MM-yyyy}")});
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(241.8751F, 60.00001F);
-            this.xrLabel11.Name = "xrLabel11";
-            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(100F, 23F);
-            this.xrLabel11.Text = "xrLabel5";
-            // 
-            // xrLabel14
-            // 
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(183.5417F, 60.00001F);
-            this.xrLabel14.Name = "xrLabel14";
-            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel14.SizeF = new System.Drawing.SizeF(58.33334F, 23F);
-            this.xrLabel14.Text = "Từ ngày:";
             // 
             // BCNhapHang
             // 
