@@ -94,8 +94,9 @@ namespace QuanLyBanHang.DanhMuc
                     sp.GiaNhap = 0;
                     db.SanPhams.Add(sp);
                     db.SaveChanges();
-                    MsgUtil.MessageThemSuccess();
                     loadDatatoGrid();
+                    MsgUtil.MessageThemSuccess();
+                    
                 }
             }
             catch (Exception v_e)
