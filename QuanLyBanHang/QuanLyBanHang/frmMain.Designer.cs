@@ -203,7 +203,7 @@
             this.menuItemBCTonKho.Image = global::QuanLyBanHang.Properties.Resources.icon7;
             this.menuItemBCTonKho.Name = "menuItemBCTonKho";
             this.menuItemBCTonKho.Size = new System.Drawing.Size(212, 26);
-            this.menuItemBCTonKho.Text = "Báo cáo tồn kho";
+            this.menuItemBCTonKho.Text = "Báo cáo tổng hợp";
             this.menuItemBCTonKho.Click += new System.EventHandler(this.menuItemBCTonKho_Click);
             // 
             // pictureBox1
@@ -238,6 +238,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ật";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

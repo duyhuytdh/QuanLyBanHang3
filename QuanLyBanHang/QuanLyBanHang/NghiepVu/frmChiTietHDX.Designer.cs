@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.fKChiTietHDNHoaDonNhapBindingSource = new System.Windows.Forms.BindingSource();
-            this.hoaDonNhapBindingSource = new System.Windows.Forms.BindingSource();
+            this.fKChiTietHDNHoaDonNhapBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hoaDonNhapBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyBanHangDataSet = new QuanLyBanHang.DataSet.QuanLyBanHangDataSet();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,9 +44,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.chiTietHDNTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.ChiTietHDNTableAdapter();
-            this.chiTietHDXBindingSource = new System.Windows.Forms.BindingSource();
-            this.chiTietHDNBindingSource = new System.Windows.Forms.BindingSource();
-            this.sanPhamBindingSource = new System.Windows.Forms.BindingSource();
+            this.chiTietHDXBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chiTietHDNBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sanPhamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDonGia = new System.Windows.Forms.TextBox();
@@ -56,7 +57,7 @@
             this.hoaDonNhapTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.HoaDonNhapTableAdapter();
             this.lblheader = new System.Windows.Forms.Label();
             this.chiTietHDXTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.ChiTietHDXTableAdapter();
-            this.viewChiTietHDXBindingSource = new System.Windows.Forms.BindingSource();
+            this.viewChiTietHDXBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.viewChiTietHDXTableAdapter = new QuanLyBanHang.DataSet.QuanLyBanHangDataSetTableAdapters.ViewChiTietHDXTableAdapter();
             this.grvHDXDetail = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -394,7 +395,6 @@
             this.thanhTienDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
             this.thanhTienDataGridViewTextBoxColumn1.HeaderText = "Thành Tiền";
             this.thanhTienDataGridViewTextBoxColumn1.Name = "thanhTienDataGridViewTextBoxColumn1";
-            this.thanhTienDataGridViewTextBoxColumn1.ReadOnly = true;
             this.thanhTienDataGridViewTextBoxColumn1.Width = 150;
             // 
             // frmChiTietHDX
